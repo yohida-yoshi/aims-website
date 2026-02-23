@@ -44,7 +44,7 @@ export default function Hero() {
                         AI漫画に変換します
                     </h1>
 
-                    <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto animate-fade-in-up md:text-center text-left" style={{ animationDelay: "200ms" }}>
+                    <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl text-left animate-fade-in-up" style={{ animationDelay: "200ms" }}>
                         圧倒的なスピードとクオリティを実現するAIマンガ制作。採用、PR、教育など、あらゆるビジネス課題を「マンガの力」で解決します。
                     </p>
 
