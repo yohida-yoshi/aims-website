@@ -41,24 +41,24 @@ export default function Flow() {
 
                 <div className="max-w-4xl mx-auto">
                     {steps.map((step, index) => (
-                        <div key={index} className="flex flex-col md:flex-row gap-6 md:gap-8 mb-12 last:mb-0 relative">
+                        <div key={index} className="flex flex-row gap-5 md:gap-8 mb-8 md:mb-12 last:mb-0 relative text-left">
                             {/* つなぎ目の線 (最後以外に表示) */}
                             {index !== steps.length - 1 && (
-                                <div className="hidden md:block absolute left-[3.3rem] top-[5rem] bottom-[-3rem] w-0.5 bg-slate-200 dark:bg-slate-800" />
+                                <div className="absolute left-[calc(2rem-1px)] md:left-[calc(3.5rem-1px)] top-8 md:top-14 bottom-[-2rem] md:bottom-[-3rem] w-[2px] bg-slate-200 dark:bg-slate-800 z-0" />
                             )}
 
-                            <div className="flex-shrink-0 flex items-center md:items-start z-10">
-                                <div className="w-16 h-16 md:w-28 md:h-28 rounded-full bg-primary-50 dark:bg-slate-900 border-4 border-white dark:border-slate-950 shadow-lg shadow-primary-500/10 flex flex-col items-center justify-center text-primary-600 dark:text-primary-400">
-                                    <span className="text-xs md:text-sm font-semibold tracking-widest uppercase mb-1">Step</span>
-                                    <span className="text-2xl md:text-4xl font-bold">{step.step}</span>
+                            <div className="flex-shrink-0 flex items-start z-10">
+                                <div className="w-16 h-16 md:w-28 md:h-28 rounded-full bg-white dark:bg-slate-900 border-[3px] border-primary-50 dark:border-slate-800 shadow-sm flex flex-col items-center justify-center text-primary-600 dark:text-primary-400">
+                                    <span className="text-[0.65rem] md:text-sm font-semibold tracking-widest uppercase mb-0.5 md:mb-1">Step</span>
+                                    <span className="text-xl md:text-4xl font-bold leading-none">{step.step}</span>
                                 </div>
                             </div>
 
-                            <div className="flex-1 pt-2 md:pt-6 pb-8 md:pb-0">
-                                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">
+                            <div className="flex-1 pt-0 md:pt-6 pb-2 md:pb-0">
+                                <h3 className="text-lg md:text-2xl font-bold text-foreground mb-2 md:mb-3">
                                     {step.title}
                                 </h3>
-                                <p className="text-slate-600 dark:text-slate-400 leading-relaxed bg-slate-50 dark:bg-slate-900/50 p-6 rounded-2xl border border-slate-100 dark:border-slate-800">
+                                <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed bg-slate-50 dark:bg-slate-900/50 p-4 md:p-6 rounded-2xl border border-slate-100 dark:border-slate-800">
                                     {step.description}
                                 </p>
                             </div>
