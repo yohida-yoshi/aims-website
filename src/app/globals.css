@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  /* セルリアンブルー寄りのメインカラー */
+  --color-primary-800: #075985;
+  --color-primary-900: #082f49;
+
+  --color-accent: #38bdf8;
+  /* アクセントカラー */
+
+  --font-sans: var(--font-inter), var(--font-noto-sans-jp), sans-serif;
+}
+
+/* 
+  Next.js 15 App Router standard boilerplate modified for blue theme
+*/
+
+:root {
+  --background: #f8fafc;
+  /* ほんのり青みがかった明るいグレー */
+  --foreground: #0f172a;
+  /* グローバルテキストカラー (slate-900) */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #020617;
+    /* 深い青黒 (slate-950) */
+    --foreground: #f1f5f9;
+    /* (slate-100) */
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* スムーズスクロール */
+html {
+  scroll-behavior: smooth;
+}
