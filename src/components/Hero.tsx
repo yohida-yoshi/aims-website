@@ -68,19 +68,16 @@ export default function Hero() {
                 <div className="w-full flex justify-center animate-fade-in-up" style={{ animationDelay: "400ms" }}>
                     <div className="relative w-full max-w-xl lg:max-w-2xl aspect-[1.4] flex [perspective:2000px] shadow-2xl rounded-sm bg-white border border-slate-200 dark:border-slate-800">
 
-                        {/* 左右のページ間にできる背表紙の線 */}
-                        <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-slate-300 dark:bg-black/50 -translate-x-1/2 z-30" />
-
                         {/* --- 左ページ（次のめくり後の左ページ：nextIndex + 1） --- */}
-                        <div className="w-1/2 h-full bg-slate-50 dark:bg-slate-900 relative overflow-hidden rounded-l-sm z-10">
-                            <img src={images[nextIndex + 1]} className="w-full h-full object-contain p-2" alt="Manga Left Page" />
-                            <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-black/5 to-transparent" />
+                        <div className="w-1/2 h-full bg-white dark:bg-white relative overflow-hidden rounded-l-sm z-10 border-none">
+                            <img src={images[nextIndex + 1]} className="w-full h-full object-contain p-2 mix-blend-multiply dark:mix-blend-normal" alt="Manga Left Page" />
+                            <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-black/10 via-black/5 to-transparent z-10" />
                         </div>
 
                         {/* --- 右ページ（今の右ページ：pageIndex） --- */}
-                        <div className="w-1/2 h-full bg-slate-50 dark:bg-slate-900 relative overflow-hidden rounded-r-sm z-10 border-l border-slate-200 dark:border-slate-800">
-                            <img src={images[pageIndex]} className="w-full h-full object-contain p-2" alt="Manga Right Page" />
-                            <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-black/5 to-transparent" />
+                        <div className="w-1/2 h-full bg-white dark:bg-white relative overflow-hidden rounded-r-sm z-10 border-none">
+                            <img src={images[pageIndex]} className="w-full h-full object-contain p-2 mix-blend-multiply dark:mix-blend-normal" alt="Manga Right Page" />
+                            <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-black/10 via-black/5 to-transparent z-10" />
                         </div>
 
                         {/* --- めくるページ (左半分の領域から右へペラっとめくれる) --- */}
@@ -89,15 +86,15 @@ export default function Hero() {
                                 }`}
                         >
                             {/* めくるページのオモテ面（今の左ページ：pageIndex + 1） */}
-                            <div className="absolute inset-0 bg-slate-50 dark:bg-slate-900 [backface-visibility:hidden] overflow-hidden rounded-l-sm border-r border-slate-200 dark:border-slate-800">
-                                <img src={images[pageIndex + 1]} className="w-full h-full object-contain p-2" alt="Manga Flipping Front" />
-                                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-black/5 to-transparent" />
+                            <div className="absolute inset-0 bg-white dark:bg-white [backface-visibility:hidden] overflow-hidden rounded-l-sm border-none">
+                                <img src={images[pageIndex + 1]} className="w-full h-full object-contain p-2 mix-blend-multiply dark:mix-blend-normal" alt="Manga Flipping Front" />
+                                <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-black/10 via-black/5 to-transparent z-10" />
                             </div>
 
                             {/* めくるページのウラ面（次の右ページ：nextIndex）※180度裏返しの状態 */}
-                            <div className="absolute inset-0 bg-slate-50 dark:bg-slate-900 [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-hidden rounded-r-sm border-l border-slate-200 dark:border-slate-800">
-                                <img src={images[nextIndex]} className="w-full h-full object-contain p-2" alt="Manga Flipping Back" />
-                                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-black/5 to-transparent" />
+                            <div className="absolute inset-0 bg-white dark:bg-white [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-hidden rounded-r-sm border-none">
+                                <img src={images[nextIndex]} className="w-full h-full object-contain p-2 mix-blend-multiply dark:mix-blend-normal" alt="Manga Flipping Back" />
+                                <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-black/10 via-black/5 to-transparent z-10" />
                             </div>
                         </div>
 
