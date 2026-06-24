@@ -1,30 +1,24 @@
 const skills = [
     {
         title: "クリエイティブディレクション",
-        description: "AI漫画・アニメ制作のディレクションを担当。キャラクター設計・シナリオ構成・作画指示まで、作品全体のクオリティを統括します。",
-        icon: (
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-            </svg>
-        ),
+        detail: "キャラクター設計・作画指示・品質管理まで、作品全体のクオリティを統括。企画の方向性を定め、チームのアウトプットを最大化します。",
+        icon: "🎨",
+        color: "from-blue-500/10 to-primary-500/10 border-blue-500/20",
+        labelColor: "text-blue-500 dark:text-blue-400",
     },
     {
         title: "クリエイター育成",
-        description: "AI漫画制作講座を主宰し、多数のクリエイターを育成。受講生がチームとして実際の案件を受注・制作できる環境を構築しました。",
-        icon: (
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-        ),
+        detail: "AI漫画制作講座を主宰し、受講生をプロクリエイターへ育成。チームとして実案件を受注・納品できる環境を構築しました。",
+        icon: "🌱",
+        color: "from-green-500/10 to-emerald-500/10 border-green-500/20",
+        labelColor: "text-green-600 dark:text-green-400",
     },
     {
         title: "AI × エンタメ制作",
-        description: "最新の画像生成AIツールを駆使。漫画・アニメ・動画など、エンタメコンテンツを高速・高品質に制作します。",
-        icon: (
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-            </svg>
-        ),
+        detail: "最新の画像生成AIツールを駆使。漫画・アニメ・動画など、エンタメコンテンツを高速・高品質に制作します。",
+        icon: "⚡",
+        color: "from-amber-500/10 to-orange-500/10 border-amber-500/20",
+        labelColor: "text-amber-600 dark:text-amber-400",
     },
 ];
 
@@ -32,48 +26,77 @@ export default function About() {
     return (
         <section id="about" className="py-24 bg-white dark:bg-slate-950">
             <div className="container mx-auto px-4 md:px-6">
+
+                {/* セクションタイトル */}
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                         プロフィール <span className="text-primary-600 font-light ml-2">About</span>
                     </h2>
-                    <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                        AIとエンタメの交差点で、新しいコンテンツの形をつくっています
-                    </p>
                 </div>
 
-                {/* 自己紹介テキスト */}
-                <div className="max-w-3xl mx-auto mb-16 p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800">
-                    <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-base md:text-lg mb-4">
-                        AI漫画制作の講座を主宰し、受講生をプロクリエイターとして育成。
-                        自身はクリエイティブディレクターとして、チームで手がけた作品の企画・監修・品質管理を担当してきました。
-                    </p>
-                    <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-base md:text-lg">
-                        Kindle出版・企業PR・メディア掲載など、多数の実績を積み重ねながら、
-                        現在はアニメーション映画の作画にも携わるなど、活動の幅をエンタメ全域へと広げています。
-                    </p>
-                </div>
+                {/* メインコンテンツ：左に経歴、右にスキル */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-5xl mx-auto">
 
-                {/* スキルカード */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {skills.map((skill, index) => (
-                        <div
-                            key={index}
-                            className="group relative p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary-500/50 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 flex flex-col items-start"
-                        >
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 to-accent rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <div className="flex items-center gap-3 mb-4">
-                                <div className="w-10 h-10 rounded-lg bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-400 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                                    {skill.icon}
-                                </div>
-                                <h3 className="text-lg font-bold text-foreground">
-                                    {skill.title}
-                                </h3>
-                            </div>
-                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
-                                {skill.description}
+                    {/* 左：経歴・ストーリー */}
+                    <div>
+                        <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-3">
+                            <span className="w-8 h-0.5 bg-primary-500 inline-block" />
+                            経歴・活動について
+                        </h3>
+                        <div className="space-y-5 text-slate-600 dark:text-slate-300 leading-relaxed">
+                            <p>
+                                AI漫画制作の講座を主宰し、受講生をプロクリエイターとして育成。
+                                自身はクリエイティブディレクターとして、チームで手がけた作品の企画・監修・品質管理を担当してきました。
+                            </p>
+                            <p>
+                                Kindle出版・企業PR・メディア掲載など多数の実績を積み重ねながら、
+                                現在はアニメーション映画の作画にも携わるなど、活動の幅をエンタメ全域へと広げています。
+                            </p>
+                            <p>
+                                漫画にとどまらず、アニメ・映画・CM・MVと、
+                                AIが切り拓く新しいエンタメの形を追い続けています。
                             </p>
                         </div>
-                    ))}
+
+                        {/* キーワードタグ */}
+                        <div className="mt-8 flex flex-wrap gap-2">
+                            {["AI漫画", "アニメーション", "クリエイター育成", "ディレクション", "Kindle出版", "映画・CM・MV"].map((tag) => (
+                                <span
+                                    key={tag}
+                                    className="px-3 py-1 rounded-full text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700"
+                                >
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* 右：スキルカード */}
+                    <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-3">
+                            <span className="w-8 h-0.5 bg-primary-500 inline-block" />
+                            できること
+                        </h3>
+                        {skills.map((skill, index) => (
+                            <div
+                                key={index}
+                                className={`p-5 rounded-2xl bg-gradient-to-br ${skill.color} border transition-all duration-300 hover:shadow-md`}
+                            >
+                                <div className="flex items-start gap-4">
+                                    <span className="text-3xl flex-shrink-0 mt-0.5">{skill.icon}</span>
+                                    <div>
+                                        <h4 className={`font-bold text-base mb-1.5 ${skill.labelColor}`}>
+                                            {skill.title}
+                                        </h4>
+                                        <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                            {skill.detail}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
                 </div>
             </div>
         </section>
