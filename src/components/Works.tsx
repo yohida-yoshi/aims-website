@@ -221,7 +221,7 @@ export default function Works() {
                                 </span>
                             </div>
                             <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed mb-3">
-                                原作・桜井美帆によるアニメーション映画。借金と失恋を抱えた女性がセレブ女性から人生哲学を学ぶ物語。本作に<strong className="text-foreground">作画担当</strong>として参加しています。
+                                原作・桜井美帆によるアニメーション映画。借金と失恋を抱えた女性がセレブ女性から人生哲学を学ぶ物語。本作に作画担当として参加しています。
                             </p>
                             <p className="text-xs text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-900 px-3 py-1.5 rounded-full inline-block border border-slate-200 dark:border-slate-800">
                                 ※本作への参加は旧活動名「ヨシダ」名義です
