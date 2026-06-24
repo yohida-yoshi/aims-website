@@ -28,8 +28,8 @@ export default function Hero() {
 
                 {/* アバター */}
                 <div className="relative">
-                    <div className="absolute inset-0 rounded-full bg-primary-300/30 blur-2xl scale-110" />
-                    <div className="relative w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                    <div className="absolute inset-0 rounded-full bg-primary-300/40 blur-3xl scale-125" />
+                    <div className="relative w-44 h-44 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-white shadow-2xl" style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.8))'}}>
                         <img
                             src="/avatar.png"
                             alt="ヨシホリ"
@@ -39,17 +39,17 @@ export default function Hero() {
                 </div>
 
                 {/* 名前・肩書き */}
-                <div>
-                    <h1 className="text-5xl md:text-7xl font-black tracking-tight text-slate-900 mb-2">
+                <div style={{filter: 'drop-shadow(0 0 12px rgba(255,255,255,1)) drop-shadow(0 0 24px rgba(255,255,255,0.8))'}}>
+                    <h1 className="text-6xl md:text-8xl font-black tracking-tight text-slate-700 mb-2">
                         ヨシホリ
                     </h1>
-                    <p className="text-xl md:text-2xl font-bold text-primary-700 tracking-wide">
+                    <p className="text-2xl md:text-3xl font-bold text-sky-600 tracking-wide">
                         AIエンタメクリエイター
                     </p>
                 </div>
 
                 {/* キャッチコピー */}
-                <p className="text-base md:text-lg text-slate-700 max-w-md leading-relaxed font-medium">
+                <p className="text-base md:text-xl text-slate-600 max-w-lg leading-relaxed font-medium" style={{filter: 'drop-shadow(0 0 8px rgba(255,255,255,1)) drop-shadow(0 0 16px rgba(255,255,255,0.9))'}}>
                     AI漫画から始まり、アニメ・映画・CM・MVへ。<br />
                     チームを率いて、新しいエンタメの形をつくるディレクター。
                 </p>
