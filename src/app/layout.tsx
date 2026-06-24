@@ -13,8 +13,8 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "AI Manga Studio - Portfolio",
-  description: "AIマンガ制作事業の実績とポートフォリオ",
+  title: "Yoshihori - Portfolio",
+  description: "ヨシホリ | AIエンタメクリエイター ポートフォリオ",
 };
 
 export default function RootLayout({
