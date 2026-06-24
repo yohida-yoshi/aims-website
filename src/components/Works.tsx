@@ -57,12 +57,12 @@ function MangaViewer() {
 }
 
 const bookWorks = [
-    { id: 1, title: "モテ英会話で人生が変わる！", image: "/works/book1.png?v=2" },
-    { id: 2, title: "『春夏秋冬戦略』ですべてうまくいく", image: "/works/book2.png?v=2" },
-    { id: 3, title: "私が「腸律師」になった理由", image: "/works/book3.png?v=2" },
-    { id: 4, title: "シニア4人の成功物語", image: "/works/book4.png?v=2" },
-    { id: 5, title: "何があっても『だいじょぶだぁ〜』なんです", image: "/works/book5.png?v=2" },
-    { id: 6, title: "バイバイ！噛み爪", image: "/works/book6.png?v=2" }
+    { id: 1, title: "モテ英会話で人生が変わる！", image: "/works/book1.png?v=3" },
+    { id: 2, title: "『春夏秋冬戦略』ですべてうまくいく", image: "/works/book2.png?v=3" },
+    { id: 3, title: "私が「腸律師」になった理由", image: "/works/book3.png?v=3" },
+    { id: 4, title: "シニア4人の成功物語", image: "/works/book4.png?v=3" },
+    { id: 5, title: "何があっても『だいじょぶだぁ〜』なんです", image: "/works/book5.png?v=3" },
+    { id: 6, title: "バイバイ！噛み爪", image: "/works/book6.png?v=3" }
 ];
 
 export default function Works() {
