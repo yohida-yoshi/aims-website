@@ -51,50 +51,63 @@ export default function Works() {
 
                 {/* 2. 企業・法人実績 & メディア掲載 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-                    {/* 法人案件 */}
-                    <div className="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-950 shadow-sm">
-                        <h3 className="text-lg md:text-xl font-bold mb-4 text-primary-600">
-                            企業・教育・イベント向け<br className="sm:hidden" />マンガ・動画制作
-                        </h3>
-                        <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+
+                    {/* 法人案件まとめ */}
+                    <div className="p-8 rounded-2xl bg-white dark:bg-slate-950 shadow-sm">
+                        <h3 className="text-xl font-bold mb-4 text-primary-600">企業・教育・イベント向けマンガ・動画制作</h3>
+                        <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
                             企業の採用、イベント集客、大学のPRなど、多岐にわたるビジネス課題を「マンガの力」で解決しています。
                         </p>
                         <ul className="space-y-4">
-                            {[
-                                { title: "某大規模イベントの漫画LP制作", desc: "集客用のランディングページ（LP）を漫画化し、親しみやすさとコンバージョン率を向上。" },
-                                { title: "某大学のPR漫画制作", desc: "オープンキャンパスの案内等に活用し、学生からの興味関心を強力に惹きつけます。" },
-                                { title: "企業の採用漫画制作", desc: "企業の魅力やリアルな働き方を分かりやすく伝え、ミスマッチ防止と応募増に貢献。" },
-                                { title: "AI漫画の動画制作", desc: "YouTube広告用などに、マンガ素材を活用したインパクトのある動画コンテンツを制作。" },
-                            ].map((item, i) => (
-                                <li key={i} className="flex items-start gap-3">
-                                    <div className="mt-1.5 w-2 h-2 rounded-full bg-primary-500 shrink-0" />
-                                    <div>
-                                        <span className="text-foreground font-bold block mb-1 text-sm md:text-base">{item.title}</span>
-                                        <span className="text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed block">{item.desc}</span>
-                                    </div>
-                                </li>
-                            ))}
+                            <li className="flex items-start gap-3">
+                                <div className="mt-1.5 w-2 h-2 rounded-full bg-primary-500 shrink-0" />
+                                <div>
+                                    <span className="text-foreground font-bold block mb-1">某大規模イベントの漫画LP制作</span>
+                                    <span className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed block">集客用のランディングページ（LP）を漫画化し、親しみやすさとコンバージョン率を向上。</span>
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <div className="mt-1.5 w-2 h-2 rounded-full bg-primary-500 shrink-0" />
+                                <div>
+                                    <span className="text-foreground font-bold block mb-1">某大学のPR漫画制作</span>
+                                    <span className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed block">オープンキャンパスの案内等に活用し、学生からの興味関心を強力に惹きつけます。</span>
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <div className="mt-1.5 w-2 h-2 rounded-full bg-primary-500 shrink-0" />
+                                <div>
+                                    <span className="text-foreground font-bold block mb-1">企業の採用漫画制作</span>
+                                    <span className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed block">企業の魅力やリアルな働き方を分かりやすく伝え、ミスマッチ防止と応募増に貢献。</span>
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <div className="mt-1.5 w-2 h-2 rounded-full bg-primary-500 shrink-0" />
+                                <div>
+                                    <span className="text-foreground font-bold block mb-1">AI漫画の動画制作</span>
+                                    <span className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed block">YouTube広告用などに、マンガ素材を活用したインパクトのある動画コンテンツを制作。</span>
+                                </div>
+                            </li>
                         </ul>
                     </div>
 
-                    {/* 新聞掲載 */}
-                    <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-primary-100 dark:from-slate-900 dark:to-primary-950/40 shadow-md relative overflow-hidden">
+                    {/* 新聞掲載アピール */}
+                    <div className="p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-primary-100 dark:from-slate-900 dark:to-primary-950/40 shadow-md relative overflow-hidden flex flex-col lg:flex-row gap-8 items-center">
                         <div className="absolute -top-16 -left-16 w-64 h-64 bg-yellow-400/30 rounded-full blur-3xl pointer-events-none" />
                         <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-primary-400/20 rounded-full blur-3xl pointer-events-none" />
 
-                        <div className="relative z-10 mb-6">
-                            <div className="inline-block px-4 py-1.5 rounded-full bg-yellow-400 text-yellow-900 font-bold text-xs mb-4 shadow-sm">
+                        <div className="lg:w-1/2 flex flex-col justify-center items-start z-10 w-full relative">
+                            <div className="inline-block px-4 py-1.5 rounded-full bg-yellow-400 text-yellow-900 font-bold text-xs mb-5 shadow-sm relative z-10">
                                 メディア掲載実績
                             </div>
-                            <h3 className="text-xl md:text-2xl font-bold mb-3 text-foreground leading-snug">
-                                「朝日小学生新聞」に<br />掲載されました！
+                            <h3 className="text-2xl font-bold mb-4 text-foreground leading-snug text-left">
+                                「朝日小学生新聞」にも<br className="hidden lg:block" />掲載されました！
                             </h3>
-                            <p className="text-sm md:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
-                                朝日小学生新聞にて、AIで漫画を作る小学生リポーターの取り組みと「AIを使った漫画の作り方」について取材・掲載。新しいクリエイティブの形として注目を集めています。
+                            <p className="text-slate-700 dark:text-slate-300 mb-0 leading-relaxed text-left">
+                                朝日小学生新聞にて、AIで漫画を作る小学生リポーターの取り組みと、「AIを使った漫画の作り方」について取材・掲載。新しいクリエイティブの形として注目を集めています。
                             </p>
                         </div>
-                        <div className="flex gap-3 md:gap-4 z-10 relative">
-                            <div className="w-1/2 aspect-[3/4] relative group">
+                        <div className="flex gap-4 lg:w-1/2 w-full z-10 justify-center">
+                            <div className="w-1/2 h-56 lg:h-72 relative group">
                                 <img
                                     src="/works/newspaper1.png"
                                     alt="朝日小学生新聞 掲載画像1"
@@ -102,7 +115,7 @@ export default function Works() {
                                     onError={(e) => e.currentTarget.style.display = 'none'}
                                 />
                             </div>
-                            <div className="w-1/2 aspect-[3/4] relative group">
+                            <div className="w-1/2 h-56 lg:h-72 relative group">
                                 <img
                                     src="/works/newspaper2.png"
                                     alt="朝日小学生新聞 掲載画像2"
@@ -112,6 +125,7 @@ export default function Works() {
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 {/* 3. アニメーション映画参加（最後に配置） */}
