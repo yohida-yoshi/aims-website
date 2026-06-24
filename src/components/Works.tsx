@@ -133,11 +133,12 @@ export default function Works() {
                     <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 border-l-4 border-primary-600 pl-4">
                         アニメーション映画参加実績
                     </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <a
                         href="https://thecelebritysecret.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group block rounded-2xl bg-white dark:bg-slate-950 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary-500/50 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 overflow-hidden max-w-3xl"
+                        className="group block rounded-2xl bg-white dark:bg-slate-950 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary-500/50 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 overflow-hidden"
                     >
                         {/* ポスター画像 */}
                         <div className="w-full aspect-video relative overflow-hidden">
@@ -170,6 +171,7 @@ export default function Works() {
                             </p>
                         </div>
                     </a>
+                    </div>
                 </div>
 
             </div>
