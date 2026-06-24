@@ -1,6 +1,60 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+const mangaImages = Array.from({ length: 10 }, (_, i) => `/works/title${i + 1}.png`);
+
+function MangaViewer() {
+    const [pageIndex, setPageIndex] = useState(0);
+    const [isFlipping, setIsFlipping] = useState(false);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIsFlipping(true);
+            setTimeout(() => {
+                setIsFlipping(false);
+                setPageIndex((prev) => (prev + 2) % 10);
+            }, 1000);
+        }, 4000);
+        return () => clearInterval(interval);
+    }, []);
+
+    const nextIndex = (pageIndex + 2) % 10;
+
+    return (
+        <div className="w-full flex justify-center mb-20">
+            <div className="relative w-full max-w-xl aspect-[1.4] flex [perspective:2000px] shadow-2xl rounded-sm bg-white border border-slate-200 dark:border-slate-800">
+                {/* 左ページ（次のめくり後） */}
+                <div className="w-1/2 h-full bg-white relative overflow-hidden rounded-l-sm z-10">
+                    <img src={mangaImages[nextIndex + 1]} className="w-full h-full object-contain p-2 mix-blend-multiply" alt="" />
+                    <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-black/10 via-black/5 to-transparent z-10" />
+                </div>
+                {/* 右ページ（現在） */}
+                <div className="w-1/2 h-full bg-white relative overflow-hidden rounded-r-sm z-10">
+                    <img src={mangaImages[pageIndex]} className="w-full h-full object-contain p-2 mix-blend-multiply" alt="" />
+                    <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-black/10 via-black/5 to-transparent z-10" />
+                </div>
+                {/* めくるページ */}
+                <div
+                    className={`absolute left-0 top-0 w-1/2 h-full origin-right [transform-style:preserve-3d] transition-transform z-20 ${
+                        isFlipping ? 'duration-[1000ms] ease-in-out [transform:rotateY(180deg)]' : 'duration-0 [transform:rotateY(0deg)]'
+                    }`}
+                >
+                    {/* オモテ面 */}
+                    <div className="absolute inset-0 bg-white [backface-visibility:hidden] overflow-hidden rounded-l-sm">
+                        <img src={mangaImages[pageIndex + 1]} className="w-full h-full object-contain p-2 mix-blend-multiply" alt="" />
+                        <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-black/10 via-black/5 to-transparent z-10" />
+                    </div>
+                    {/* ウラ面 */}
+                    <div className="absolute inset-0 bg-white [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-hidden rounded-r-sm">
+                        <img src={mangaImages[nextIndex]} className="w-full h-full object-contain p-2 mix-blend-multiply" alt="" />
+                        <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-black/10 via-black/5 to-transparent z-10" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
 
 const bookWorks = [
     { id: 1, title: "モテ英会話で人生が変わる！", image: "/works/book1.png?v=2" },
@@ -23,6 +77,9 @@ export default function Works() {
                         クリエイティブディレクターとして関わった主な作品・案件です。
                     </p>
                 </div>
+
+                {/* 漫画ページめくりアニメーション */}
+                <MangaViewer />
 
                 {/* 1. Kindle漫画出版実績 */}
                 <div className="mb-20">
