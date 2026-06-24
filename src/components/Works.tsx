@@ -19,22 +19,24 @@ export default function Works() {
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                         制作実績 <span className="text-primary-600 font-light ml-2">Works</span>
                     </h2>
-                    <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-left md:text-center">
+                    <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                         クリエイティブディレクターとして関わった主な作品・案件です。
                     </p>
                 </div>
 
                 {/* 1. Kindle漫画出版実績 */}
                 <div className="mb-20">
-                    <h3 className="text-2xl font-bold text-foreground mb-8 border-l-4 border-primary-600 pl-4">書籍のAI漫画化・出版実績</h3>
-                    <p className="text-slate-600 dark:text-slate-400 mb-6">
-                        著名なビジネス書・実用書をAI漫画として再構成し、Kindle出版。シナリオ構成からキャラクター設計、作画ディレクションまで担当しました。
+                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 border-l-4 border-primary-600 pl-4">
+                        書籍のAI漫画化・出版実績の一部
+                    </h3>
+                    <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 mb-6">
+                        著名なビジネス書・実用書をAI漫画として再構成し、Kindle出版。キャラクター設計・作画ディレクションまで担当しました。
                     </p>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-6">
                         {bookWorks.map((book) => (
-                            <div key={book.id} className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800 bg-white aspect-[2/3] flex flex-col justify-end">
-                                <div className="absolute inset-0 bg-slate-100 dark:bg-slate-800 flex flex-col items-center justify-center p-4">
-                                    <span className="text-xs text-slate-400 mb-2">画像を入れてください</span>
+                            <div key={book.id} className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800 bg-white aspect-[2/3]">
+                                <div className="absolute inset-0 bg-slate-100 dark:bg-slate-800 flex items-center justify-center p-2">
+                                    <span className="text-xs text-slate-400 text-center">画像を入れてください</span>
                                 </div>
                                 <img
                                     src={book.image}
@@ -47,94 +49,52 @@ export default function Works() {
                     </div>
                 </div>
 
-                {/* 2. アニメーション映画参加 */}
-                <div className="mb-20">
-                    <h3 className="text-2xl font-bold text-foreground mb-8 border-l-4 border-primary-600 pl-4">アニメーション映画参加実績</h3>
-                    <a
-                        href="https://thecelebritysecret.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group block p-8 rounded-2xl bg-white dark:bg-slate-950 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary-500/50 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 max-w-2xl"
-                    >
-                        <div className="flex items-start gap-6">
-                            <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center text-primary-600 text-3xl">
-                                🎬
-                            </div>
-                            <div>
-                                <div className="flex items-center gap-2 mb-2">
-                                    <h4 className="text-xl font-bold text-foreground">The Celebrity Secret</h4>
-                                    <svg className="w-4 h-4 text-slate-400 group-hover:text-primary-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
-                                </div>
-                                <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-3">
-                                    原作・桜井美帆によるアニメーション映画。借金と失恋を抱えた女性がセレブ女性から人生哲学を学ぶ物語。本作に<strong className="text-foreground">作画担当</strong>として参加しています。
-                                </p>
-                                <p className="text-xs text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-900 px-3 py-1.5 rounded-full inline-block border border-slate-200 dark:border-slate-800">
-                                    ※本作への参加は旧活動名「ヨシダ」名義です
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                {/* 3. 企業・法人実績 & メディア掲載 */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="p-8 rounded-2xl bg-white dark:bg-slate-950 shadow-sm">
-                        <h3 className="text-xl font-bold mb-4 text-primary-600">企業・教育・イベント向けマンガ・動画制作</h3>
-                        <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                {/* 2. 企業・法人実績 & メディア掲載 */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+                    {/* 法人案件 */}
+                    <div className="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-950 shadow-sm">
+                        <h3 className="text-lg md:text-xl font-bold mb-4 text-primary-600">
+                            企業・教育・イベント向け<br className="sm:hidden" />マンガ・動画制作
+                        </h3>
+                        <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
                             企業の採用、イベント集客、大学のPRなど、多岐にわたるビジネス課題を「マンガの力」で解決しています。
                         </p>
                         <ul className="space-y-4">
-                            <li className="flex items-start gap-3">
-                                <div className="mt-1.5 w-2 h-2 rounded-full bg-primary-500 shrink-0" />
-                                <div>
-                                    <span className="text-foreground font-bold block mb-1">某大規模イベントの漫画LP制作</span>
-                                    <span className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed block">集客用のランディングページ（LP）を漫画化し、親しみやすさとコンバージョン率を向上。</span>
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <div className="mt-1.5 w-2 h-2 rounded-full bg-primary-500 shrink-0" />
-                                <div>
-                                    <span className="text-foreground font-bold block mb-1">某大学のPR漫画制作</span>
-                                    <span className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed block">オープンキャンパスの案内等に活用し、学生からの興味関心を強力に惹きつけます。</span>
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <div className="mt-1.5 w-2 h-2 rounded-full bg-primary-500 shrink-0" />
-                                <div>
-                                    <span className="text-foreground font-bold block mb-1">企業の採用漫画制作</span>
-                                    <span className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed block">企業の魅力やリアルな働き方を分かりやすく伝え、ミスマッチ防止と応募増に貢献。</span>
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <div className="mt-1.5 w-2 h-2 rounded-full bg-primary-500 shrink-0" />
-                                <div>
-                                    <span className="text-foreground font-bold block mb-1">AI漫画の動画制作</span>
-                                    <span className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed block">YouTube広告用などに、マンガ素材を活用したインパクトのある動画コンテンツを制作。</span>
-                                </div>
-                            </li>
+                            {[
+                                { title: "某大規模イベントの漫画LP制作", desc: "集客用のランディングページ（LP）を漫画化し、親しみやすさとコンバージョン率を向上。" },
+                                { title: "某大学のPR漫画制作", desc: "オープンキャンパスの案内等に活用し、学生からの興味関心を強力に惹きつけます。" },
+                                { title: "企業の採用漫画制作", desc: "企業の魅力やリアルな働き方を分かりやすく伝え、ミスマッチ防止と応募増に貢献。" },
+                                { title: "AI漫画の動画制作", desc: "YouTube広告用などに、マンガ素材を活用したインパクトのある動画コンテンツを制作。" },
+                            ].map((item, i) => (
+                                <li key={i} className="flex items-start gap-3">
+                                    <div className="mt-1.5 w-2 h-2 rounded-full bg-primary-500 shrink-0" />
+                                    <div>
+                                        <span className="text-foreground font-bold block mb-1 text-sm md:text-base">{item.title}</span>
+                                        <span className="text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed block">{item.desc}</span>
+                                    </div>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
                     {/* 新聞掲載 */}
-                    <div className="p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-primary-100 dark:from-slate-900 dark:to-primary-950/40 shadow-md relative overflow-hidden flex flex-col lg:flex-row gap-8 items-center">
+                    <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-primary-100 dark:from-slate-900 dark:to-primary-950/40 shadow-md relative overflow-hidden">
                         <div className="absolute -top-16 -left-16 w-64 h-64 bg-yellow-400/30 rounded-full blur-3xl pointer-events-none" />
                         <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-primary-400/20 rounded-full blur-3xl pointer-events-none" />
 
-                        <div className="lg:w-1/2 flex flex-col justify-center items-start z-10 w-full relative">
-                            <div className="inline-block px-4 py-1.5 rounded-full bg-yellow-400 text-yellow-900 font-bold text-xs mb-5 shadow-sm relative z-10">
+                        <div className="relative z-10 mb-6">
+                            <div className="inline-block px-4 py-1.5 rounded-full bg-yellow-400 text-yellow-900 font-bold text-xs mb-4 shadow-sm">
                                 メディア掲載実績
                             </div>
-                            <h3 className="text-2xl font-bold mb-4 text-foreground leading-snug text-left">
-                                「朝日小学生新聞」にも<br className="hidden lg:block" />掲載されました！
+                            <h3 className="text-xl md:text-2xl font-bold mb-3 text-foreground leading-snug">
+                                「朝日小学生新聞」に<br />掲載されました！
                             </h3>
-                            <p className="text-slate-700 dark:text-slate-300 mb-0 leading-relaxed text-left">
-                                朝日小学生新聞にて、AIで漫画を作る小学生リポーターの取り組みと、「AIを使った漫画の作り方」について取材・掲載。新しいクリエイティブの形として注目を集めています。
+                            <p className="text-sm md:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+                                朝日小学生新聞にて、AIで漫画を作る小学生リポーターの取り組みと「AIを使った漫画の作り方」について取材・掲載。新しいクリエイティブの形として注目を集めています。
                             </p>
                         </div>
-                        <div className="flex gap-4 lg:w-1/2 w-full z-10 justify-center">
-                            <div className="w-1/2 h-56 lg:h-72 relative group">
+                        <div className="flex gap-3 md:gap-4 z-10 relative">
+                            <div className="w-1/2 aspect-[3/4] relative group">
                                 <img
                                     src="/works/newspaper1.png"
                                     alt="朝日小学生新聞 掲載画像1"
@@ -142,7 +102,7 @@ export default function Works() {
                                     onError={(e) => e.currentTarget.style.display = 'none'}
                                 />
                             </div>
-                            <div className="w-1/2 h-56 lg:h-72 relative group">
+                            <div className="w-1/2 aspect-[3/4] relative group">
                                 <img
                                     src="/works/newspaper2.png"
                                     alt="朝日小学生新聞 掲載画像2"
@@ -153,6 +113,51 @@ export default function Works() {
                         </div>
                     </div>
                 </div>
+
+                {/* 3. アニメーション映画参加（最後に配置） */}
+                <div>
+                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 border-l-4 border-primary-600 pl-4">
+                        アニメーション映画参加実績
+                    </h3>
+                    <a
+                        href="https://thecelebritysecret.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block rounded-2xl bg-white dark:bg-slate-950 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary-500/50 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 overflow-hidden max-w-3xl"
+                    >
+                        {/* ポスター画像 */}
+                        <div className="w-full aspect-video relative overflow-hidden">
+                            <img
+                                src="/works/celebrity-secret.png"
+                                alt="The Celebrity Secret - AN ANIMATED FILM"
+                                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                            />
+                            {/* リンクアイコン */}
+                            <div className="absolute top-3 right-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <svg className="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        {/* テキスト情報 */}
+                        <div className="p-5 md:p-6">
+                            <div className="flex flex-wrap items-center gap-2 mb-3">
+                                <h4 className="text-lg md:text-xl font-bold text-foreground">The Celebrity Secret</h4>
+                                <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-400">
+                                    アニメーション映画
+                                </span>
+                            </div>
+                            <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed mb-3">
+                                原作・桜井美帆によるアニメーション映画。借金と失恋を抱えた女性がセレブ女性から人生哲学を学ぶ物語。本作に<strong className="text-foreground">作画担当</strong>として参加しています。
+                            </p>
+                            <p className="text-xs text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-900 px-3 py-1.5 rounded-full inline-block border border-slate-200 dark:border-slate-800">
+                                ※本作への参加は旧活動名「ヨシダ」名義です
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
             </div>
         </section>
     );
