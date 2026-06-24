@@ -71,11 +71,6 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* 下スクロール誘導 */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-slate-500">
-                <span className="text-xs tracking-widest uppercase font-medium">Scroll</span>
-                <div className="w-px h-8 bg-gradient-to-b from-slate-500 to-transparent" />
-            </div>
         </section>
     );
 }
