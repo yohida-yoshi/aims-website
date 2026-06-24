@@ -2,7 +2,6 @@
 
 import React from 'react';
 
-// kindle本の実績データ
 const bookWorks = [
     { id: 1, title: "モテ英会話で人生が変わる！", image: "/works/book1.png?v=2" },
     { id: 2, title: "『春夏秋冬戦略』ですべてうまくいく", image: "/works/book2.png?v=2" },
@@ -21,24 +20,22 @@ export default function Works() {
                         制作実績 <span className="text-primary-600 font-light ml-2">Works</span>
                     </h2>
                     <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-left md:text-center">
-                        書籍等の出版物から、企業のビジネス課題解決まで、幅広く対応しています。
+                        クリエイティブディレクターとして関わった主な作品・案件です。
                     </p>
                 </div>
 
-                {/* 1. 書籍のAI漫画化 */}
+                {/* 1. Kindle漫画出版実績 */}
                 <div className="mb-20">
                     <h3 className="text-2xl font-bold text-foreground mb-8 border-l-4 border-primary-600 pl-4">書籍のAI漫画化・出版実績</h3>
                     <p className="text-slate-600 dark:text-slate-400 mb-6">
-                        著名なビジネス書の内容をAIマンガで分かりやすく再構成し、新たな読者層を開拓しています。以下は制作したKindle本の一例です。
+                        著名なビジネス書・実用書をAI漫画として再構成し、Kindle出版。シナリオ構成からキャラクター設計、作画ディレクションまで担当しました。
                     </p>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
                         {bookWorks.map((book) => (
                             <div key={book.id} className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800 bg-white aspect-[2/3] flex flex-col justify-end">
-                                {/* 画像が読み込めない場合のプレースホルダー */}
                                 <div className="absolute inset-0 bg-slate-100 dark:bg-slate-800 flex flex-col items-center justify-center p-4">
                                     <span className="text-xs text-slate-400 mb-2">画像を入れてください</span>
                                 </div>
-                                {/* 実際の画像 */}
                                 <img
                                     src={book.image}
                                     alt={book.title}
@@ -50,10 +47,39 @@ export default function Works() {
                     </div>
                 </div>
 
-                {/* 2. ビジネス・法人向け制作実績 ＆ 新聞掲載 */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* 2. アニメーション映画参加 */}
+                <div className="mb-20">
+                    <h3 className="text-2xl font-bold text-foreground mb-8 border-l-4 border-primary-600 pl-4">アニメーション映画参加実績</h3>
+                    <a
+                        href="https://thecelebritysecret.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block p-8 rounded-2xl bg-white dark:bg-slate-950 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary-500/50 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 max-w-2xl"
+                    >
+                        <div className="flex items-start gap-6">
+                            <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center text-primary-600 text-3xl">
+                                🎬
+                            </div>
+                            <div>
+                                <div className="flex items-center gap-2 mb-2">
+                                    <h4 className="text-xl font-bold text-foreground">The Celebrity Secret</h4>
+                                    <svg className="w-4 h-4 text-slate-400 group-hover:text-primary-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </div>
+                                <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-3">
+                                    原作・桜井美帆によるアニメーション映画。借金と失恋を抱えた女性がセレブ女性から人生哲学を学ぶ物語。本作に<strong className="text-foreground">作画担当</strong>として参加しています。
+                                </p>
+                                <p className="text-xs text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-900 px-3 py-1.5 rounded-full inline-block border border-slate-200 dark:border-slate-800">
+                                    ※本作への参加は旧活動名「ヨシダ」名義です
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
 
-                    {/* 法人案件まとめ */}
+                {/* 3. 企業・法人実績 & メディア掲載 */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="p-8 rounded-2xl bg-white dark:bg-slate-950 shadow-sm">
                         <h3 className="text-xl font-bold mb-4 text-primary-600">企業・教育・イベント向けマンガ・動画制作</h3>
                         <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
@@ -91,9 +117,8 @@ export default function Works() {
                         </ul>
                     </div>
 
-                    {/* 新聞掲載アピール */}
+                    {/* 新聞掲載 */}
                     <div className="p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-primary-100 dark:from-slate-900 dark:to-primary-950/40 shadow-md relative overflow-hidden flex flex-col lg:flex-row gap-8 items-center">
-                        {/* 背景の装飾オブジェクト（柔らかい光のデザインにリニューアル） */}
                         <div className="absolute -top-16 -left-16 w-64 h-64 bg-yellow-400/30 rounded-full blur-3xl pointer-events-none" />
                         <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-primary-400/20 rounded-full blur-3xl pointer-events-none" />
 
@@ -105,10 +130,9 @@ export default function Works() {
                                 「朝日小学生新聞」にも<br className="hidden lg:block" />掲載されました！
                             </h3>
                             <p className="text-slate-700 dark:text-slate-300 mb-0 leading-relaxed text-left">
-                                朝日小学生新聞にて、AIで漫画を作る小学生リポーターの取り組みと、その具体的な「AIを使った漫画の作り方」について取材・掲載されました。新しいクリエイティブの形として注目を集めています。
+                                朝日小学生新聞にて、AIで漫画を作る小学生リポーターの取り組みと、「AIを使った漫画の作り方」について取材・掲載。新しいクリエイティブの形として注目を集めています。
                             </p>
                         </div>
-                        {/* 新聞の画像プレースホルダー */}
                         <div className="flex gap-4 lg:w-1/2 w-full z-10 justify-center">
                             <div className="w-1/2 h-56 lg:h-72 relative group">
                                 <img
@@ -128,7 +152,6 @@ export default function Works() {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>

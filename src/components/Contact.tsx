@@ -17,11 +17,11 @@ export default function Contact() {
             <div className="relative z-10 container mx-auto px-4 md:px-6">
                 <div className="max-w-3xl mx-auto text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-sm">
-                        ビジネス課題を、<br />マンガで解決しませんか？
+                        お仕事のご依頼・<br />コラボのご相談はこちら
                     </h2>
                     <p className="text-lg text-white/90 mb-8 font-medium drop-shadow-sm">
-                        「こんなマンガ作れる？」「費用感を知りたい」など、まずはお気軽にご相談ください。<br className="hidden md:block" />
-                        AIマンガ制作のプロフェッショナルが、最適なプランをご提案します。
+                        漫画・アニメ・CM・MVなど、AIエンタメ制作のご依頼をお待ちしています。<br className="hidden md:block" />
+                        まずはお気軽にXのDMからご連絡ください。
                     </p>
                 </div>
 
