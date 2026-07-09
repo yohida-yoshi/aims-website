@@ -92,7 +92,7 @@ export default function Works() {
                             書籍のAI漫画化・出版実績の一部
                         </h3>
                         <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 mb-6">
-                            著名なビジネス書・実用書をAI漫画として再構成し、Kindle出版。キャラクター設計・作画ディレクションまで担当しました。
+                            著名なビジネス書・実用書をAI漫画として再構成し、Kindle出版。キャラクター設計・作画ディレクションなど担当しました。
                         </p>
                     </Reveal>
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-6">

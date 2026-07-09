@@ -35,7 +35,7 @@ const visionItems = [
 export default function Vision() {
     return (
         <section id="vision" className="py-28 md:py-36 bg-white dark:bg-slate-950">
-            <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+            <div className="container mx-auto px-4 md:px-6">
                 <Reveal>
                     <SectionHeading
                         number="03"
