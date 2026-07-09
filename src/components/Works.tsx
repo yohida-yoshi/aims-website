@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Reveal from './Reveal';
+import SectionHeading from './SectionHeading';
 
 const mangaImages = Array.from({ length: 10 }, (_, i) => `/works/title${i + 1}.png`);
 
@@ -67,50 +69,57 @@ const bookWorks = [
 
 export default function Works() {
     return (
-        <section id="works" className="py-24 bg-slate-50 dark:bg-slate-900">
+        <section id="works" className="py-28 md:py-36 bg-slate-50 dark:bg-slate-900">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                        制作実績 <span className="text-primary-600 font-light ml-2">Works</span>
-                    </h2>
-                    <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                        クリエイティブディレクターとして関わった主な作品・案件です。
-                    </p>
-                </div>
+                <Reveal>
+                    <SectionHeading
+                        number="02"
+                        en="Works"
+                        ja="制作実績"
+                        description="クリエイティブディレクターとして関わった主な作品・案件です。"
+                    />
+                </Reveal>
 
                 {/* 漫画ページめくりアニメーション */}
-                <MangaViewer />
+                <Reveal>
+                    <MangaViewer />
+                </Reveal>
 
                 {/* 1. Kindle漫画出版実績 */}
-                <div className="mb-20">
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 border-l-4 border-primary-600 pl-4">
-                        書籍のAI漫画化・出版実績の一部
-                    </h3>
-                    <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 mb-6">
-                        著名なビジネス書・実用書をAI漫画として再構成し、Kindle出版。キャラクター設計・作画ディレクションまで担当しました。
-                    </p>
+                <div className="mb-24">
+                    <Reveal>
+                        <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 border-l-4 border-primary-600 pl-4">
+                            書籍のAI漫画化・出版実績の一部
+                        </h3>
+                        <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 mb-6">
+                            著名なビジネス書・実用書をAI漫画として再構成し、Kindle出版。キャラクター設計・作画ディレクションまで担当しました。
+                        </p>
+                    </Reveal>
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-6">
-                        {bookWorks.map((book) => (
-                            <div key={book.id} className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800 bg-white aspect-[2/3]">
-                                <div className="absolute inset-0 bg-slate-100 dark:bg-slate-800 flex items-center justify-center p-2">
-                                    <span className="text-xs text-slate-400 text-center">画像を入れてください</span>
+                        {bookWorks.map((book, i) => (
+                            <Reveal key={book.id} delay={i * 80}>
+                                <div className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800 bg-white aspect-[2/3] hover:-translate-y-1">
+                                    <div className="absolute inset-0 bg-slate-100 dark:bg-slate-800 flex items-center justify-center p-2">
+                                        <span className="text-xs text-slate-400 text-center">画像を入れてください</span>
+                                    </div>
+                                    <img
+                                        src={book.image}
+                                        alt={book.title}
+                                        className="absolute inset-0 w-full h-full object-contain p-2 drop-shadow-sm rounded-md"
+                                        onError={(e) => e.currentTarget.style.display = 'none'}
+                                    />
                                 </div>
-                                <img
-                                    src={book.image}
-                                    alt={book.title}
-                                    className="absolute inset-0 w-full h-full object-contain p-2 drop-shadow-sm rounded-md"
-                                    onError={(e) => e.currentTarget.style.display = 'none'}
-                                />
-                            </div>
+                            </Reveal>
                         ))}
                     </div>
                 </div>
 
                 {/* 2. 企業・法人実績 & メディア掲載 */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
 
                     {/* 法人案件まとめ */}
-                    <div className="p-8 rounded-2xl bg-white dark:bg-slate-950 shadow-sm">
+                    <Reveal className="h-full">
+                    <div className="h-full p-8 rounded-2xl bg-white dark:bg-slate-950 shadow-sm">
                         <h3 className="text-xl font-bold mb-4 text-primary-600">企業・教育・イベント向けマンガ・動画制作</h3>
                         <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
                             企業の採用、イベント集客、大学のPRなど、多岐にわたるビジネス課題を「マンガの力」で解決しています。
@@ -146,9 +155,11 @@ export default function Works() {
                             </li>
                         </ul>
                     </div>
+                    </Reveal>
 
                     {/* 新聞掲載アピール */}
-                    <div className="p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-primary-100 dark:from-slate-900 dark:to-primary-950/40 shadow-md relative overflow-hidden flex flex-col lg:flex-row gap-8 items-center">
+                    <Reveal delay={150} className="h-full">
+                    <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-primary-100 dark:from-slate-900 dark:to-primary-950/40 shadow-md relative overflow-hidden flex flex-col lg:flex-row gap-8 items-center">
                         <div className="absolute -top-16 -left-16 w-64 h-64 bg-yellow-400/30 rounded-full blur-3xl pointer-events-none" />
                         <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-primary-400/20 rounded-full blur-3xl pointer-events-none" />
 
@@ -182,15 +193,19 @@ export default function Works() {
                             </div>
                         </div>
                     </div>
+                    </Reveal>
 
                 </div>
 
                 {/* 3. アニメーション映画参加（最後に配置） */}
                 <div>
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 border-l-4 border-primary-600 pl-4">
-                        アニメーション映画参加実績
-                    </h3>
+                    <Reveal>
+                        <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 border-l-4 border-primary-600 pl-4">
+                            アニメーション映画参加実績
+                        </h3>
+                    </Reveal>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <Reveal>
                     <a
                         href="https://thecelebritysecret.com/"
                         target="_blank"
@@ -228,6 +243,7 @@ export default function Works() {
                             </p>
                         </div>
                     </a>
+                    </Reveal>
                     </div>
                 </div>
 

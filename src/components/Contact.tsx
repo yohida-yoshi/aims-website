@@ -1,6 +1,8 @@
+import Reveal from "./Reveal";
+
 export default function Contact() {
     return (
-        <section id="contact" className="py-24 relative overflow-hidden bg-cyan-600">
+        <section id="contact" className="py-28 md:py-36 relative overflow-hidden bg-cyan-600">
             {/* Stylish Background Pattern & Gradients */}
             <div className="absolute inset-0 z-0">
                 {/* Base Mesh Gradient (3 colors for depth) */}
@@ -15,16 +17,24 @@ export default function Contact() {
             </div>
 
             <div className="relative z-10 container mx-auto px-4 md:px-6">
-                <div className="max-w-3xl mx-auto text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-sm">
-                        お仕事のご依頼・<br />コラボのご相談はこちら
-                    </h2>
-                    <p className="text-lg text-white/90 mb-8 font-medium drop-shadow-sm">
-                        漫画・アニメ・CM・MVなど、AIエンタメ制作のご依頼をお待ちしています。<br className="hidden md:block" />
-                        まずはお気軽にXのDMからご連絡ください。
-                    </p>
-                </div>
+                <Reveal>
+                    <div className="max-w-3xl mx-auto text-center mb-12">
+                        <div className="flex items-baseline justify-center gap-4 mb-4 text-white/70">
+                            <span className="text-sm md:text-base font-mono font-semibold tracking-widest">04</span>
+                            <span className="h-px w-10 bg-white/50" />
+                            <span className="text-xs md:text-sm font-semibold tracking-[0.3em] uppercase">お問い合わせ</span>
+                        </div>
+                        <h2 className="text-5xl md:text-7xl font-black tracking-tight leading-none text-white mb-8">
+                            Contact<span className="text-white/60">.</span>
+                        </h2>
+                        <p className="text-lg text-white/90 mb-8 font-medium drop-shadow-sm">
+                            漫画・アニメ・CM・MVなど、AIエンタメ制作のご依頼をお待ちしています。<br className="hidden md:block" />
+                            まずはお気軽にXのDMからご連絡ください。
+                        </p>
+                    </div>
+                </Reveal>
 
+                <Reveal delay={120}>
                 <div className="max-w-xl mx-auto bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-2xl">
                     <div className="text-center py-6">
                         <div className="mb-8">
@@ -53,6 +63,7 @@ export default function Contact() {
                         </p>
                     </div>
                 </div>
+                </Reveal>
             </div>
         </section>
     );

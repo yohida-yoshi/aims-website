@@ -1,3 +1,6 @@
+import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
+
 const skills = [
     {
         title: "クリエイティブディレクション",
@@ -24,49 +27,49 @@ const skills = [
 
 export default function About() {
     return (
-        <section id="about" className="py-24 bg-white dark:bg-slate-950">
+        <section id="about" className="py-28 md:py-36 bg-white dark:bg-slate-950">
             <div className="container mx-auto px-4 md:px-6 max-w-5xl">
 
-                {/* セクションタイトル */}
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                        プロフィール <span className="text-primary-600 font-light ml-2">About</span>
-                    </h2>
-                </div>
+                <Reveal>
+                    <SectionHeading number="01" en="About" ja="プロフィール" />
+                </Reveal>
 
                 {/* 経歴・活動について */}
-                <div className="mb-14">
-                    <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-3">
-                        <span className="w-8 h-0.5 bg-primary-500 inline-block" />
-                        経歴・活動について
-                    </h3>
-                    <div className="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
-                        <p>
-                            AI漫画制作の講座を主宰し、受講生をプロクリエイターとして育成。
-                            自身はクリエイティブディレクターとして、チームで手がけた作品の企画・監修・品質管理を担当してきました。
-                        </p>
-                        <p>
-                            Kindle出版・企業PR・メディア掲載など多数の実績を積み重ねながら、
-                            現在はアニメーション映画の作画にも携わるなど、活動の幅をエンタメ全域へと広げています。
-                        </p>
-                        <p>
-                            漫画にとどまらず、アニメ・映画・CM・MVと、
-                            AIが切り拓く新しいエンタメの形を追い続けています。
-                        </p>
+                <Reveal>
+                    <div className="mb-16">
+                        <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-3">
+                            <span className="w-8 h-0.5 bg-primary-500 inline-block" />
+                            経歴・活動について
+                        </h3>
+                        <div className="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+                            <p>
+                                AI漫画制作の講座を主宰し、受講生をプロクリエイターとして育成。
+                                自身はクリエイティブディレクターとして、チームで手がけた作品の企画・監修・品質管理を担当してきました。
+                            </p>
+                            <p>
+                                Kindle出版・企業PR・メディア掲載など多数の実績を積み重ねながら、
+                                現在はアニメーション映画の作画にも携わるなど、活動の幅をエンタメ全域へと広げています。
+                            </p>
+                            <p>
+                                漫画にとどまらず、アニメ・映画・CM・MVと、
+                                AIが切り拓く新しいエンタメの形を追い続けています。
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </Reveal>
 
                 {/* できること */}
-                <div>
+                <Reveal>
                     <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-3">
                         <span className="w-8 h-0.5 bg-primary-500 inline-block" />
                         できること
                     </h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        {skills.map((skill, index) => (
+                </Reveal>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    {skills.map((skill, index) => (
+                        <Reveal key={index} delay={index * 120}>
                             <div
-                                key={index}
-                                className={`p-5 rounded-2xl bg-gradient-to-br ${skill.color} border transition-all duration-300 hover:shadow-md`}
+                                className={`h-full p-5 rounded-2xl bg-gradient-to-br ${skill.color} border transition-all duration-300 hover:shadow-md hover:-translate-y-1`}
                             >
                                 <span className="text-3xl block mb-3">{skill.icon}</span>
                                 <h4 className={`font-bold text-base mb-2 ${skill.labelColor}`}>
@@ -76,8 +79,8 @@ export default function About() {
                                     {skill.detail}
                                 </p>
                             </div>
-                        ))}
-                    </div>
+                        </Reveal>
+                    ))}
                 </div>
 
             </div>

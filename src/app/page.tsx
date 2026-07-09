@@ -12,10 +12,16 @@ export default function Home() {
           <a href="#" className="font-bold text-xl tracking-tight text-primary-600 dark:text-primary-400 hover:opacity-80 transition-opacity">
             ヨシホリ <span className="font-normal text-sm text-slate-500 hidden sm:inline-block">| AIエンタメクリエイター</span>
           </a>
-          <nav className="hidden md:flex gap-6 text-sm font-medium">
-            <a href="#about" className="text-slate-600 hover:text-primary-600 dark:text-slate-300 dark:hover:text-primary-400 transition-colors">プロフィール</a>
-            <a href="#works" className="text-slate-600 hover:text-primary-600 dark:text-slate-300 dark:hover:text-primary-400 transition-colors">実績</a>
-            <a href="#vision" className="text-slate-600 hover:text-primary-600 dark:text-slate-300 dark:hover:text-primary-400 transition-colors">ビジョン</a>
+          <nav className="hidden md:flex gap-7 text-sm font-medium">
+            <a href="#about" className="group text-slate-600 hover:text-primary-600 dark:text-slate-300 dark:hover:text-primary-400 transition-colors">
+              <span className="font-mono text-xs text-primary-500 mr-1.5">01</span>プロフィール
+            </a>
+            <a href="#works" className="group text-slate-600 hover:text-primary-600 dark:text-slate-300 dark:hover:text-primary-400 transition-colors">
+              <span className="font-mono text-xs text-primary-500 mr-1.5">02</span>実績
+            </a>
+            <a href="#vision" className="group text-slate-600 hover:text-primary-600 dark:text-slate-300 dark:hover:text-primary-400 transition-colors">
+              <span className="font-mono text-xs text-primary-500 mr-1.5">03</span>ビジョン
+            </a>
           </nav>
           <a href="#contact" className="rounded-full bg-primary-600 px-5 py-2 text-sm font-medium text-white hover:bg-primary-700 transition-colors">
             お問い合わせ

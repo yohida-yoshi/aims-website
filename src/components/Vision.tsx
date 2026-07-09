@@ -1,3 +1,6 @@
+import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
+
 const visionItems = [
     {
         emoji: "🎬",
@@ -31,55 +34,55 @@ const visionItems = [
 
 export default function Vision() {
     return (
-        <section id="vision" className="py-24 bg-white dark:bg-slate-950">
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                        目指す姿 <span className="text-primary-600 font-light ml-2">Vision</span>
-                    </h2>
-                    <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                        漫画から始まり、エンタメのすべてへ。<br />
-                        AIクリエイターとして、表現の可能性を広げ続けます。
-                    </p>
-                </div>
+        <section id="vision" className="py-28 md:py-36 bg-white dark:bg-slate-950">
+            <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+                <Reveal>
+                    <SectionHeading
+                        number="03"
+                        en="Vision"
+                        ja="目指す姿"
+                        description={<>漫画から始まり、エンタメのすべてへ。AIクリエイターとして、表現の可能性を広げ続けます。</>}
+                    />
+                </Reveal>
 
-                <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {visionItems.map((item, index) => (
-                        <div
-                            key={index}
-                            className="group p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary-500/50 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300"
-                        >
-                            <div className="flex items-start gap-4">
-                                <div className="text-4xl flex-shrink-0">{item.emoji}</div>
-                                <div>
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
-                                        <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${item.statusColor}`}>
-                                            {item.status}
-                                        </span>
+                        <Reveal key={index} delay={(index % 2) * 120}>
+                            <div className="group h-full p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary-500/50 hover:shadow-xl hover:shadow-primary-500/10 hover:-translate-y-1 transition-all duration-300">
+                                <div className="flex items-start gap-4">
+                                    <div className="text-4xl flex-shrink-0">{item.emoji}</div>
+                                    <div>
+                                        <div className="flex items-center gap-2 mb-2">
+                                            <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
+                                            <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${item.statusColor}`}>
+                                                {item.status}
+                                            </span>
+                                        </div>
+                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                                            {item.description}
+                                        </p>
                                     </div>
-                                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
-                                        {item.description}
-                                    </p>
                                 </div>
                             </div>
-                        </div>
+                        </Reveal>
                     ))}
                 </div>
 
                 {/* 締めメッセージ */}
-                <div className="max-w-2xl mx-auto mt-16 text-center">
-                    <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
-                        AIはツールではなく、<strong className="text-foreground">共同クリエイター</strong>。<br />
-                        技術と感性を掛け合わせ、まだ見ぬエンタメを一緒に創りませんか？
-                    </p>
-                    <a
-                        href="#contact"
-                        className="inline-flex items-center justify-center mt-8 rounded-full bg-primary-600 px-8 py-4 text-base font-medium text-white shadow-lg shadow-primary-500/30 transition-all hover:bg-primary-700 hover:scale-105 active:scale-95"
-                    >
-                        お問い合わせ・コラボ相談
-                    </a>
-                </div>
+                <Reveal>
+                    <div className="max-w-2xl mx-auto mt-20 text-center">
+                        <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                            AIはツールではなく、<strong className="text-foreground">共同クリエイター</strong>。<br />
+                            技術と感性を掛け合わせ、まだ見ぬエンタメを一緒に創りませんか？
+                        </p>
+                        <a
+                            href="#contact"
+                            className="inline-flex items-center justify-center mt-8 rounded-full bg-primary-600 px-8 py-4 text-base font-medium text-white shadow-lg shadow-primary-500/30 transition-all hover:bg-primary-700 hover:scale-105 active:scale-95"
+                        >
+                            お問い合わせ・コラボ相談 <span className="ml-2">↗</span>
+                        </a>
+                    </div>
+                </Reveal>
             </div>
         </section>
     );
