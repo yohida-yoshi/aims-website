@@ -25,7 +25,7 @@ function MangaViewer() {
 
     return (
         <div className="w-full flex justify-center mb-20">
-            <div className="relative w-full max-w-xl aspect-[1.4] flex [perspective:2000px] shadow-2xl rounded-sm bg-white border border-slate-200 dark:border-slate-800">
+            <div className="relative w-full max-w-2xl aspect-[1.4] flex [perspective:2000px] shadow-2xl rounded-sm bg-white border border-slate-200 dark:border-slate-800">
                 {/* 左ページ（次のめくり後） */}
                 <div className="w-1/2 h-full bg-white relative overflow-hidden rounded-l-sm z-10">
                     <img src={mangaImages[nextIndex + 1]} className="w-full h-full object-contain p-2 mix-blend-multiply" alt="" />
