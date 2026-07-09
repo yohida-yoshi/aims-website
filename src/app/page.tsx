@@ -3,10 +3,12 @@ import About from "@/components/About";
 import Works from "@/components/Works";
 import Vision from "@/components/Vision";
 import Contact from "@/components/Contact";
+import CursorGlow from "@/components/CursorGlow";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col font-sans">
+      <CursorGlow />
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <a href="#" className="font-bold text-xl tracking-tight text-primary-600 dark:text-primary-400 hover:opacity-80 transition-opacity">
