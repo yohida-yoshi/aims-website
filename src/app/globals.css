@@ -48,6 +48,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* カスタムカーソル使用時はネイティブカーソルを隠す */
+.custom-cursor,
+.custom-cursor * {
+  cursor: none !important;
+}
+
 /* スクロールリビール演出 */
 .reveal {
   opacity: 0;
