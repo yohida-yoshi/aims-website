@@ -115,7 +115,7 @@ export default function Works() {
                 </div>
 
                 {/* 2. 企業・法人実績 & メディア掲載 */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 mb-24">
+                <div className="grid grid-cols-1 gap-14 md:gap-16 mb-24">
 
                     {/* 法人案件まとめ */}
                     <Reveal className="h-full">
@@ -130,28 +130,28 @@ export default function Works() {
                         </p>
                         <ul className="space-y-6">
                             <li className="flex items-start gap-4">
-                                <span className="font-mono text-xs font-semibold text-slate-400 mt-1 shrink-0">a.</span>
+                                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 shrink-0" />
                                 <div>
                                     <span className="text-foreground font-bold block mb-1">某大規模イベントの漫画LP制作</span>
                                     <span className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed block">集客用のランディングページ（LP）を漫画化し、親しみやすさとコンバージョン率を向上。</span>
                                 </div>
                             </li>
                             <li className="flex items-start gap-4">
-                                <span className="font-mono text-xs font-semibold text-slate-400 mt-1 shrink-0">b.</span>
+                                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 shrink-0" />
                                 <div>
                                     <span className="text-foreground font-bold block mb-1">某大学のPR漫画制作</span>
                                     <span className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed block">オープンキャンパスの案内等に活用し、学生からの興味関心を強力に惹きつけます。</span>
                                 </div>
                             </li>
                             <li className="flex items-start gap-4">
-                                <span className="font-mono text-xs font-semibold text-slate-400 mt-1 shrink-0">c.</span>
+                                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 shrink-0" />
                                 <div>
                                     <span className="text-foreground font-bold block mb-1">企業の採用漫画制作</span>
                                     <span className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed block">企業の魅力やリアルな働き方を分かりやすく伝え、ミスマッチ防止と応募増に貢献。</span>
                                 </div>
                             </li>
                             <li className="flex items-start gap-4">
-                                <span className="font-mono text-xs font-semibold text-slate-400 mt-1 shrink-0">d.</span>
+                                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 shrink-0" />
                                 <div>
                                     <span className="text-foreground font-bold block mb-1">AI漫画の動画制作</span>
                                     <span className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed block">YouTube広告用などに、マンガ素材を活用したインパクトのある動画コンテンツを制作。</span>
