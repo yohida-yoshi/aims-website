@@ -86,12 +86,16 @@ export default function Works() {
                 </Reveal>
 
                 {/* 1. Kindle漫画出版実績 */}
-                <div className="mb-24">
+                <div className="mb-24 border-t-2 border-slate-200 dark:border-slate-800 pt-6 transition-colors duration-300 hover:border-primary-500">
                     <Reveal>
-                        <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 border-l-4 border-primary-600 pl-4">
+                        <div className="flex items-baseline justify-between mb-5">
+                            <span className="font-mono text-sm font-semibold tracking-widest text-primary-600">04</span>
+                            <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-slate-400">Publishing</span>
+                        </div>
+                        <h3 className="text-lg md:text-xl font-bold mb-3 text-foreground">
                             書籍のAI漫画化・出版実績の一部
                         </h3>
-                        <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 mb-6">
+                        <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
                             著名なビジネス書・実用書をAI漫画として再構成し、Kindle出版。キャラクター設計・作画ディレクションなど担当しました。
                         </p>
                     </Reveal>
@@ -121,7 +125,7 @@ export default function Works() {
                     <Reveal className="h-full">
                     <div className="h-full border-t-2 border-slate-200 dark:border-slate-800 pt-6 transition-colors duration-300 hover:border-primary-500">
                         <div className="flex items-baseline justify-between mb-5">
-                            <span className="font-mono text-sm font-semibold tracking-widest text-primary-600">04</span>
+                            <span className="font-mono text-sm font-semibold tracking-widest text-primary-600">05</span>
                             <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-slate-400">Business</span>
                         </div>
                         <h3 className="text-lg md:text-xl font-bold mb-3 text-foreground">企業・教育・イベント向けマンガ・動画制作</h3>
@@ -165,7 +169,7 @@ export default function Works() {
                     <Reveal delay={150} className="h-full">
                     <div className="h-full border-t-2 border-slate-200 dark:border-slate-800 pt-6 transition-colors duration-300 hover:border-primary-500">
                         <div className="flex items-baseline justify-between mb-5">
-                            <span className="font-mono text-sm font-semibold tracking-widest text-primary-600">05</span>
+                            <span className="font-mono text-sm font-semibold tracking-widest text-primary-600">06</span>
                             <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-slate-400">Media</span>
                         </div>
                         <h3 className="text-lg md:text-xl font-bold mb-3 text-foreground">
@@ -174,8 +178,8 @@ export default function Works() {
                         <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
                             朝日小学生新聞にて、AIで漫画を作る小学生リポーターの取り組みと、「AIを使った漫画の作り方」について取材・掲載。新しいクリエイティブの形として注目を集めています。
                         </p>
-                        <div className="flex gap-4">
-                            <div className="w-1/2 aspect-[3/4] relative group">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-6">
+                            <div className="aspect-[2/3] relative group">
                                 <img
                                     src="/works/newspaper1.png"
                                     alt="朝日小学生新聞 掲載画像1"
@@ -183,7 +187,7 @@ export default function Works() {
                                     onError={(e) => e.currentTarget.style.display = 'none'}
                                 />
                             </div>
-                            <div className="w-1/2 aspect-[3/4] relative group">
+                            <div className="aspect-[2/3] relative group">
                                 <img
                                     src="/works/newspaper2.png"
                                     alt="朝日小学生新聞 掲載画像2"
