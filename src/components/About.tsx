@@ -3,25 +3,22 @@ import SectionHeading from "./SectionHeading";
 
 const skills = [
     {
+        number: "01",
+        en: "Creative Direction",
         title: "クリエイティブディレクション",
         detail: "キャラクター設計・作画指示・品質管理まで、作品全体のクオリティを統括。企画の方向性を定め、チームのアウトプットを最大化します。",
-        icon: "🎨",
-        color: "from-blue-500/10 to-primary-500/10 border-blue-500/20",
-        labelColor: "text-blue-500 dark:text-blue-400",
     },
     {
+        number: "02",
+        en: "Creator Education",
         title: "クリエイター育成",
         detail: "AI漫画制作講座を主宰し、受講生をプロクリエイターへ育成。チームとして実案件を受注・納品できる環境を構築しました。",
-        icon: "🌱",
-        color: "from-green-500/10 to-emerald-500/10 border-green-500/20",
-        labelColor: "text-green-600 dark:text-green-400",
     },
     {
+        number: "03",
+        en: "AI Entertainment",
         title: "AI × エンタメ制作",
         detail: "最新の画像生成AIツールを駆使。漫画・アニメ・動画など、エンタメコンテンツを高速・高品質に制作します。",
-        icon: "⚡",
-        color: "from-amber-500/10 to-orange-500/10 border-amber-500/20",
-        labelColor: "text-amber-600 dark:text-amber-400",
     },
 ];
 
@@ -65,17 +62,22 @@ export default function About() {
                         できること
                     </h3>
                 </Reveal>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 md:gap-12">
                     {skills.map((skill, index) => (
                         <Reveal key={index} delay={index * 120}>
-                            <div
-                                className={`h-full p-5 rounded-2xl bg-gradient-to-br ${skill.color} border transition-all duration-300 hover:shadow-md hover:-translate-y-1`}
-                            >
-                                <span className="text-3xl block mb-3">{skill.icon}</span>
-                                <h4 className={`font-bold text-base mb-2 ${skill.labelColor}`}>
+                            <div className="group h-full border-t-2 border-slate-200 dark:border-slate-800 pt-6 transition-colors duration-300 hover:border-primary-500">
+                                <div className="flex items-baseline justify-between mb-5">
+                                    <span className="font-mono text-sm font-semibold tracking-widest text-primary-600">
+                                        {skill.number}
+                                    </span>
+                                    <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-slate-400">
+                                        {skill.en}
+                                    </span>
+                                </div>
+                                <h4 className="font-bold text-lg mb-3 text-foreground">
                                     {skill.title}
                                 </h4>
-                                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
                                     {skill.detail}
                                 </p>
                             </div>
