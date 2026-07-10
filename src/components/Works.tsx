@@ -86,13 +86,9 @@ export default function Works() {
                 </Reveal>
 
                 {/* 1. Kindle漫画出版実績 */}
-                <div className="mb-24 border-t-2 border-slate-200 dark:border-slate-800 pt-6 transition-colors duration-300 hover:border-primary-500">
+                <div className="mb-24">
                     <Reveal>
-                        <div className="flex items-baseline justify-between mb-5">
-                            <span className="font-mono text-sm font-semibold tracking-widest text-primary-600">04</span>
-                            <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-slate-400">Publishing</span>
-                        </div>
-                        <h3 className="text-lg md:text-xl font-bold mb-3 text-foreground">
+                        <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 border-l-4 border-primary-600 pl-4">
                             書籍のAI漫画化・出版実績の一部
                         </h3>
                         <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
@@ -123,12 +119,8 @@ export default function Works() {
 
                     {/* 法人案件まとめ */}
                     <Reveal className="h-full">
-                    <div className="h-full border-t-2 border-slate-200 dark:border-slate-800 pt-6 transition-colors duration-300 hover:border-primary-500">
-                        <div className="flex items-baseline justify-between mb-5">
-                            <span className="font-mono text-sm font-semibold tracking-widest text-primary-600">05</span>
-                            <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-slate-400">Business</span>
-                        </div>
-                        <h3 className="text-lg md:text-xl font-bold mb-3 text-foreground">企業・教育・イベント向けマンガ・動画制作</h3>
+                    <div className="h-full">
+                        <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 border-l-4 border-primary-600 pl-4">企業・教育・イベント向けマンガ・動画制作</h3>
                         <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
                             企業の採用、イベント集客、大学のPRなど、多岐にわたるビジネス課題を「マンガの力」で解決しています。
                         </p>
@@ -167,12 +159,8 @@ export default function Works() {
 
                     {/* 新聞掲載アピール */}
                     <Reveal delay={150} className="h-full">
-                    <div className="h-full border-t-2 border-slate-200 dark:border-slate-800 pt-6 transition-colors duration-300 hover:border-primary-500">
-                        <div className="flex items-baseline justify-between mb-5">
-                            <span className="font-mono text-sm font-semibold tracking-widest text-primary-600">06</span>
-                            <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-slate-400">Media</span>
-                        </div>
-                        <h3 className="text-lg md:text-xl font-bold mb-3 text-foreground">
+                    <div className="h-full">
+                        <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 border-l-4 border-primary-600 pl-4">
                             「朝日小学生新聞」にも掲載されました
                         </h3>
                         <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
