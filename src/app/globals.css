@@ -20,19 +20,10 @@
 */
 
 :root {
-  --background: #f8fafc;
-  /* ほんのり青みがかった明るいグレー */
-  --foreground: #0f172a;
-  /* グローバルテキストカラー (slate-900) */
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #020617;
-    /* 深い青黒 (slate-950) */
-    --foreground: #f1f5f9;
-    /* (slate-100) */
-  }
+  --background: #020617;
+  /* 深い青黒 (slate-950) */
+  --foreground: #f1f5f9;
+  /* (slate-100) */
 }
 
 body {
@@ -132,17 +123,11 @@ html {
   line-height: 1;
   letter-spacing: -0.02em;
   color: transparent;
-  -webkit-text-stroke: 1.5px rgba(2, 132, 199, 0.10);
+  -webkit-text-stroke: 1.5px rgba(56, 189, 248, 0.10);
   user-select: none;
   pointer-events: none;
   white-space: nowrap;
   z-index: 0;
-}
-
-@media (prefers-color-scheme: dark) {
-  .watermark {
-    -webkit-text-stroke: 1.5px rgba(56, 189, 248, 0.10);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

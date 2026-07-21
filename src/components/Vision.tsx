@@ -34,7 +34,7 @@ const visionItems = [
 
 export default function Vision() {
     return (
-        <section id="vision" className="relative overflow-hidden py-28 md:py-36 bg-white dark:bg-slate-950">
+        <section id="vision" className="relative overflow-hidden py-28 md:py-36 bg-slate-950">
             <span aria-hidden="true" className="watermark">VISION</span>
             <div className="relative z-10 container mx-auto px-4 md:px-6">
                 <Reveal>
@@ -78,7 +78,7 @@ export default function Vision() {
                 {/* 締めメッセージ */}
                 <Reveal>
                     <div className="max-w-2xl mx-auto mt-20 text-center">
-                        <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                        <p className="text-slate-300 text-lg leading-relaxed">
                             AIはツールではなく、<strong className="text-foreground">共同クリエイター</strong>。<br />
                             技術と感性を掛け合わせ、まだ見ぬエンタメを一緒に創りませんか？
                         </p>

@@ -15,7 +15,7 @@ export default function SectionHeading({ number, en, ja, light = false, descript
                 <span className="text-sm md:text-base font-mono font-semibold tracking-widest">
                     {number}
                 </span>
-                <span className={`h-px flex-none w-10 ${light ? "bg-white/40" : "bg-slate-300"}`} />
+                <span className={`h-px flex-none w-10 ${light ? "bg-white/40" : "bg-slate-700"}`} />
                 <span className="text-xs md:text-sm font-semibold tracking-[0.3em] uppercase">
                     {ja}
                 </span>
@@ -25,7 +25,7 @@ export default function SectionHeading({ number, en, ja, light = false, descript
                 <span className="text-primary-500">.</span>
             </h2>
             {description && (
-                <p className={`mt-6 text-base md:text-lg max-w-2xl leading-relaxed ${light ? "text-white/90" : "text-slate-600 dark:text-slate-400"}`}>
+                <p className={`mt-6 text-base md:text-lg max-w-2xl leading-relaxed ${light ? "text-white/90" : "text-slate-400"}`}>
                     {description}
                 </p>
             )}

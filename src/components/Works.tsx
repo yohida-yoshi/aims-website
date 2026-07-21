@@ -25,7 +25,7 @@ function MangaViewer() {
 
     return (
         <div className="w-full flex justify-center mb-20">
-            <div className="relative w-full max-w-4xl aspect-[1.4] flex [perspective:2000px] shadow-2xl rounded-sm bg-white border border-slate-200 dark:border-slate-800">
+            <div className="relative w-full max-w-4xl aspect-[1.4] flex [perspective:2000px] shadow-2xl rounded-sm bg-white border border-slate-700">
                 {/* 左ページ（次のめくり後） */}
                 <div className="w-1/2 h-full bg-white relative overflow-hidden rounded-l-sm z-10">
                     <img src={mangaImages[nextIndex + 1]} className="w-full h-full object-contain p-2 mix-blend-multiply" alt="" />
@@ -69,7 +69,7 @@ const bookWorks = [
 
 export default function Works() {
     return (
-        <section id="works" className="relative overflow-hidden py-28 md:py-36 bg-slate-50 dark:bg-slate-900">
+        <section id="works" className="relative overflow-hidden py-28 md:py-36 bg-slate-900">
             <span aria-hidden="true" className="watermark">WORKS</span>
             <div className="relative z-10 container mx-auto px-4 md:px-6">
                 <Reveal>
@@ -92,14 +92,14 @@ export default function Works() {
                         <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 border-l-4 border-primary-600 pl-4">
                             書籍のAI漫画化・出版実績の一部
                         </h3>
-                        <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+                        <p className="text-sm text-slate-400 mb-8 leading-relaxed">
                             著名なビジネス書・実用書をAI漫画として再構成し、Kindle出版。キャラクター設計・作画ディレクションなど担当しました。
                         </p>
                     </Reveal>
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-6">
                         {bookWorks.map((book, i) => (
                             <Reveal key={book.id} delay={i * 80}>
-                                <div className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800 bg-white aspect-[2/3] hover:-translate-y-1">
+                                <div className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-700 bg-white aspect-[2/3] hover:-translate-y-1">
                                     <div className="absolute inset-0 bg-slate-100 dark:bg-slate-800 flex items-center justify-center p-2">
                                         <span className="text-xs text-slate-400 text-center">画像を入れてください</span>
                                     </div>
@@ -122,7 +122,7 @@ export default function Works() {
                     <Reveal className="h-full">
                     <div className="h-full">
                         <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 border-l-4 border-primary-600 pl-4">企業・教育・イベント向けマンガ・動画制作</h3>
-                        <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+                        <p className="text-sm text-slate-400 mb-8 leading-relaxed">
                             企業の採用、イベント集客、大学のPRなど、多岐にわたるビジネス課題を「マンガの力」で解決しています。
                         </p>
                         <ul className="space-y-6">
@@ -130,28 +130,28 @@ export default function Works() {
                                 <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 shrink-0" />
                                 <div>
                                     <span className="text-foreground font-bold block mb-1">某大規模イベントの漫画LP制作</span>
-                                    <span className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed block">集客用のランディングページ（LP）を漫画化し、親しみやすさとコンバージョン率を向上。</span>
+                                    <span className="text-sm text-slate-400 leading-relaxed block">集客用のランディングページ（LP）を漫画化し、親しみやすさとコンバージョン率を向上。</span>
                                 </div>
                             </li>
                             <li className="flex items-start gap-4">
                                 <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 shrink-0" />
                                 <div>
                                     <span className="text-foreground font-bold block mb-1">某大学のPR漫画制作</span>
-                                    <span className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed block">オープンキャンパスの案内等に活用し、学生からの興味関心を強力に惹きつけます。</span>
+                                    <span className="text-sm text-slate-400 leading-relaxed block">オープンキャンパスの案内等に活用し、学生からの興味関心を強力に惹きつけます。</span>
                                 </div>
                             </li>
                             <li className="flex items-start gap-4">
                                 <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 shrink-0" />
                                 <div>
                                     <span className="text-foreground font-bold block mb-1">企業の採用漫画制作</span>
-                                    <span className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed block">企業の魅力やリアルな働き方を分かりやすく伝え、ミスマッチ防止と応募増に貢献。</span>
+                                    <span className="text-sm text-slate-400 leading-relaxed block">企業の魅力やリアルな働き方を分かりやすく伝え、ミスマッチ防止と応募増に貢献。</span>
                                 </div>
                             </li>
                             <li className="flex items-start gap-4">
                                 <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 shrink-0" />
                                 <div>
                                     <span className="text-foreground font-bold block mb-1">AI漫画の動画制作</span>
-                                    <span className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed block">YouTube広告用などに、マンガ素材を活用したインパクトのある動画コンテンツを制作。</span>
+                                    <span className="text-sm text-slate-400 leading-relaxed block">YouTube広告用などに、マンガ素材を活用したインパクトのある動画コンテンツを制作。</span>
                                 </div>
                             </li>
                         </ul>
@@ -164,7 +164,7 @@ export default function Works() {
                         <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 border-l-4 border-primary-600 pl-4">
                             「朝日小学生新聞」にも掲載されました
                         </h3>
-                        <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+                        <p className="text-sm text-slate-400 mb-8 leading-relaxed">
                             朝日小学生新聞にて、AIで漫画を作る小学生リポーターの取り組みと、「AIを使った漫画の作り方」について取材・掲載。新しいクリエイティブの形として注目を集めています。
                         </p>
                         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-6">
@@ -203,7 +203,7 @@ export default function Works() {
                         href="https://thecelebritysecret.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group block rounded-2xl bg-white dark:bg-slate-950 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary-500/50 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 overflow-hidden"
+                        className="group block rounded-2xl bg-slate-900 shadow-sm border border-slate-800 hover:border-primary-500/50 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 overflow-hidden"
                     >
                         {/* ポスター画像 */}
                         <div className="w-full aspect-video relative overflow-hidden">
@@ -213,7 +213,7 @@ export default function Works() {
                                 className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                             />
                             {/* リンクアイコン */}
-                            <div className="absolute top-3 right-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div className="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
                                 <svg className="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
@@ -228,10 +228,10 @@ export default function Works() {
                                     アニメーション映画
                                 </span>
                             </div>
-                            <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed mb-3">
+                            <p className="text-sm md:text-base text-slate-400 leading-relaxed mb-3">
                                 原作・桜井美帆によるアニメーション映画。借金と失恋を抱えた女性がセレブ女性から人生哲学を学ぶ物語。本作に作画担当として参加しています。
                             </p>
-                            <p className="text-xs text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-900 px-3 py-1.5 rounded-full inline-block border border-slate-200 dark:border-slate-800">
+                            <p className="text-xs text-slate-400 bg-slate-900 px-3 py-1.5 rounded-full inline-block border border-slate-800">
                                 ※本作への参加は旧活動名「ヨシダ」名義です
                             </p>
                         </div>

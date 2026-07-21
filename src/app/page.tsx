@@ -12,15 +12,15 @@ export default function Home() {
     <div className="min-h-screen flex flex-col font-sans">
       <CursorGlow />
       <ScrollProgress />
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <a href="#" className="font-bold text-xl tracking-tight text-primary-600 dark:text-primary-400 hover:opacity-80 transition-opacity">
+          <a href="#" className="font-bold text-xl tracking-tight text-sky-400 hover:opacity-80 transition-opacity">
             ヨシホリ <span className="font-normal text-sm text-slate-500 hidden sm:inline-block">| AIエンタメクリエイター</span>
           </a>
           <nav className="hidden md:flex gap-6 text-sm font-medium">
-            <a href="#about" className="text-slate-600 hover:text-primary-600 dark:text-slate-300 dark:hover:text-primary-400 transition-colors">プロフィール</a>
-            <a href="#works" className="text-slate-600 hover:text-primary-600 dark:text-slate-300 dark:hover:text-primary-400 transition-colors">実績</a>
-            <a href="#vision" className="text-slate-600 hover:text-primary-600 dark:text-slate-300 dark:hover:text-primary-400 transition-colors">ビジョン</a>
+            <a href="#about" className="text-slate-300 hover:text-sky-400 transition-colors">プロフィール</a>
+            <a href="#works" className="text-slate-300 hover:text-sky-400 transition-colors">実績</a>
+            <a href="#vision" className="text-slate-300 hover:text-sky-400 transition-colors">ビジョン</a>
           </nav>
           <a href="#contact" className="rounded-full bg-primary-600 px-5 py-2 text-sm font-medium text-white hover:bg-primary-700 transition-colors">
             お問い合わせ
