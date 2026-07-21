@@ -4,7 +4,6 @@ import Works from "@/components/Works";
 import Vision from "@/components/Vision";
 import Contact from "@/components/Contact";
 import CursorGlow from "@/components/CursorGlow";
-import Marquee from "@/components/Marquee";
 import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
@@ -30,10 +29,8 @@ export default function Home() {
 
       <main className="flex-1 w-full flex flex-col pt-16">
         <Hero />
-        <Marquee />
         <About />
         <Works />
-        <Marquee />
         <Vision />
         <Contact />
       </main>
