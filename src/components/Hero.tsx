@@ -64,27 +64,6 @@ export default function Hero() {
                     </div>
                 </div>
 
-                {/* キャッチコピー */}
-                <p className="hero-fade text-base md:text-xl text-slate-300 max-w-lg leading-relaxed font-medium" style={{ animationDelay: '0.6s' }}>
-                    AI漫画から始まり、アニメ・映画・CM・MVへ。<br />
-                    チームを率いて、新しいエンタメの形をつくるディレクター。
-                </p>
-
-                {/* ボタン */}
-                <div className="hero-fade flex flex-col sm:flex-row gap-4 mt-2" style={{ animationDelay: '0.85s' }}>
-                    <a
-                        href="#works"
-                        className="inline-flex items-center justify-center rounded-full bg-primary-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary-500/25 transition-all hover:bg-primary-500 hover:scale-105 active:scale-95"
-                    >
-                        制作実績を見る
-                    </a>
-                    <a
-                        href="#about"
-                        className="inline-flex items-center justify-center rounded-full border border-slate-600 bg-white/5 backdrop-blur-sm px-8 py-3.5 text-base font-semibold text-slate-200 transition-all hover:bg-white/10 hover:border-slate-400 hover:scale-105 active:scale-95"
-                    >
-                        プロフィール
-                    </a>
-                </div>
             </div>
 
         </section>
