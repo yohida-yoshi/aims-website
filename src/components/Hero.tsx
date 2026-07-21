@@ -39,12 +39,6 @@ export default function Hero() {
             {/* コンテンツ */}
             <div className="relative z-10 container mx-auto px-4 md:px-6 flex flex-col items-center text-center gap-6">
 
-                {/* バッジ */}
-                <div className="hero-fade inline-flex items-center rounded-full border border-sky-400/30 bg-white/5 backdrop-blur-sm px-4 py-1.5 text-sm font-semibold text-sky-300" style={{ animationDelay: '0.15s' }}>
-                    <span className="flex h-2 w-2 rounded-full bg-sky-400 mr-2 animate-pulse" />
-                    AI × Entertainment Creator
-                </div>
-
                 {/* 名前・肩書き */}
                 <div className="hero-fade" style={{ animationDelay: '0.35s' }}>
                     <h1 className="text-7xl md:text-9xl font-black tracking-tight text-white mb-5">
