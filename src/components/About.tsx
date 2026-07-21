@@ -1,5 +1,17 @@
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
+import FilmStrip from "./FilmStrip";
+
+const stripImagesA = [
+    "/works/title1.png", "/works/book1.png", "/works/title3.png", "/vision/anime.png",
+    "/works/title5.png", "/works/book3.png", "/works/title7.png", "/vision/mv.png",
+    "/works/title9.png", "/works/book5.png",
+];
+const stripImagesB = [
+    "/vision/movie.png", "/works/title2.png", "/works/book2.png", "/works/title4.png",
+    "/vision/cm.png", "/works/title6.png", "/works/book4.png", "/works/title8.png",
+    "/works/book6.png", "/works/title10.png",
+];
 
 const skills = [
     {
@@ -26,6 +38,14 @@ export default function About() {
     return (
         <section id="about" className="relative overflow-hidden py-28 md:py-36 bg-slate-950">
             <span aria-hidden="true" className="watermark">ABOUT</span>
+
+            {/* 背景: スクロール連動フィルムストリップ */}
+            <div className="absolute inset-0 z-0 opacity-[0.14]">
+                <FilmStrip images={stripImagesA} speed={0.22} className="absolute -left-40 -right-40 top-10 rotate-[-5deg]" />
+                <FilmStrip images={stripImagesB} speed={-0.18} className="absolute -left-40 -right-40 bottom-10 rotate-[4deg]" />
+            </div>
+            {/* 文字裏を少し暗く締めて可読性キープ */}
+            <div className="absolute inset-0 z-[1] bg-gradient-to-b from-slate-950/60 via-slate-950/30 to-slate-950/60" />
             <div className="relative z-10 container mx-auto px-4 md:px-6">
 
                 <Reveal>
