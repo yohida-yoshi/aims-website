@@ -134,27 +134,9 @@ export default function Works() {
                         <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 border-l-4 border-primary-600 pl-4">
                             「朝日小学生新聞」にも掲載されました
                         </h3>
-                        <p className="text-sm text-slate-400 mb-8 leading-relaxed">
-                            朝日小学生新聞にて、AIで漫画を作る小学生リポーターの取り組みと、「AIを使った漫画の作り方」について取材・掲載。新しいクリエイティブの形として注目を集めています。
+                        <p className="text-sm text-slate-400 mb-0 leading-relaxed">
+                            「AIを使った漫画の作り方」について取材を受け、朝日小学生新聞に掲載されました。
                         </p>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-6">
-                            <div className="aspect-[2/3] relative group">
-                                <img
-                                    src="/works/newspaper1.png"
-                                    alt="朝日小学生新聞 掲載画像1"
-                                    className="absolute inset-0 w-full h-full object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-105"
-                                    onError={(e) => e.currentTarget.style.display = 'none'}
-                                />
-                            </div>
-                            <div className="aspect-[2/3] relative group">
-                                <img
-                                    src="/works/newspaper2.png"
-                                    alt="朝日小学生新聞 掲載画像2"
-                                    className="absolute inset-0 w-full h-full object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-105"
-                                    onError={(e) => e.currentTarget.style.display = 'none'}
-                                />
-                            </div>
-                        </div>
                     </div>
                     </Reveal>
 
