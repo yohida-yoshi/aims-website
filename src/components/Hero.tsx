@@ -32,36 +32,28 @@ export default function Hero() {
                 <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-slate-950" />
             </div>
 
-            {/* 巨大アウトラインの英字名 */}
-            <div aria-hidden="true" className="hero-fade absolute inset-0 z-[5] flex items-center justify-center pointer-events-none select-none" style={{ animationDelay: '0.05s' }}>
-                <span
-                    className="font-black leading-none tracking-tight whitespace-nowrap"
-                    style={{
-                        fontSize: 'clamp(4.5rem, 14vw, 15rem)',
-                        color: 'transparent',
-                        WebkitTextStroke: '1.5px rgba(56,189,248,0.22)',
-                        transform: 'translateY(-52%)',
-                    }}
-                >
-                    YOSHIHORI
-                </span>
-            </div>
-
             {/* コンテンツ */}
-            <div className="relative z-10 container mx-auto px-4 md:px-6 flex flex-col items-center text-center gap-6">
+            <div className="relative z-10 container mx-auto px-4 md:px-6 flex flex-col items-center text-center">
 
                 {/* 名前・肩書き */}
-                <div className="hero-fade" style={{ animationDelay: '0.35s' }}>
-                    <h1 className="text-7xl md:text-9xl font-black tracking-tight text-white mb-5">
+                <div className="hero-fade" style={{ animationDelay: '0.2s' }}>
+                    <p className="text-sm md:text-base font-semibold tracking-[0.6em] text-sky-400/90 uppercase mb-4 md:mb-6 ml-[0.6em]">
                         ヨシホリ
+                    </p>
+                    <h1
+                        className="font-black leading-[0.95] tracking-tighter bg-gradient-to-b from-white via-white to-slate-500 bg-clip-text text-transparent select-none"
+                        style={{ fontSize: 'clamp(3.5rem, 11vw, 11rem)' }}
+                    >
+                        YOSHIHORI
                     </h1>
-                    <div className="flex items-center justify-center gap-3">
-                        <span className="h-px w-8 md:w-12 bg-sky-400/60" />
-                        <p className="text-xl md:text-3xl font-bold text-sky-400 tracking-[0.15em]">
-                            AIエンタメクリエイター
-                        </p>
-                        <span className="h-px w-8 md:w-12 bg-sky-400/60" />
-                    </div>
+                </div>
+
+                <div className="hero-fade mt-8 md:mt-10 flex items-center justify-center gap-4" style={{ animationDelay: '0.5s' }}>
+                    <span className="h-px w-10 md:w-16 bg-gradient-to-r from-transparent to-sky-400/70" />
+                    <p className="text-base md:text-xl font-bold text-slate-200 tracking-[0.35em] ml-[0.35em]">
+                        AIエンタメクリエイター
+                    </p>
+                    <span className="h-px w-10 md:w-16 bg-gradient-to-l from-transparent to-sky-400/70" />
                 </div>
 
             </div>
