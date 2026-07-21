@@ -29,10 +29,16 @@ export default function Hero() {
 
             {/* 背景イラスト（パララックス+ケンバーンズ） */}
             <div ref={bgRef} className="absolute inset-0 z-0 will-change-transform">
+                {/* PC: ワイドイラスト / スマホ: 縦長ポートレート */}
                 <img
                     src="/hero-bg.png"
                     alt=""
-                    className="kenburns w-full h-full object-cover object-center"
+                    className="kenburns hidden md:block w-full h-full object-cover object-center"
+                />
+                <img
+                    src="/hero-portrait.png"
+                    alt=""
+                    className="kenburns block md:hidden w-full h-full object-cover object-top"
                 />
                 {/* オーバーレイ：控えめにしてイラストを活かす。中央テキスト裏だけ白を強める */}
                 <div className="absolute inset-0 bg-gradient-to-b from-white/35 via-white/15 to-white/60" />
