@@ -19,11 +19,9 @@ export default function Hero() {
     return (
         <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-slate-950">
 
-            {/* 背景装飾：ブルーの光とグリッド */}
+            {/* 背景装飾：ごく控えめな光のみ */}
             <div className="absolute inset-0 z-0 pointer-events-none">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:56px_56px]" />
-                <div className="absolute -top-32 left-1/3 w-[700px] h-[700px] rounded-full bg-primary-600/20 blur-[160px]" />
-                <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full bg-sky-400/10 blur-[140px]" />
+                <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full bg-primary-600/10 blur-[180px]" />
                 {/* フィルムストリップ(ヒーロー内を3本横切る) */}
                 <FilmStrip images={heroStripB} speed={-0.2} className="absolute -left-40 -right-40 top-14 rotate-[3deg] opacity-[0.14]" />
                 <FilmStrip images={heroStripC} speed={0.16} className="absolute -left-40 -right-40 top-1/2 -translate-y-1/2 rotate-[-2deg] opacity-[0.10]" />
@@ -41,7 +39,7 @@ export default function Hero() {
                         ヨシホリ
                     </p>
                     <h1
-                        className="font-black leading-[0.95] tracking-tighter bg-gradient-to-b from-white via-white to-slate-500 bg-clip-text text-transparent select-none"
+                        className="font-black leading-[0.95] tracking-tighter text-white select-none"
                         style={{ fontSize: 'clamp(3.5rem, 11vw, 11rem)' }}
                     >
                         YOSHIHORI
