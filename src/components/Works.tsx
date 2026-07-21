@@ -123,38 +123,8 @@ export default function Works() {
                     <div className="h-full">
                         <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 border-l-4 border-primary-600 pl-4">企業・教育・イベント向けマンガ・動画制作</h3>
                         <p className="text-sm text-slate-400 mb-8 leading-relaxed">
-                            企業の採用、イベント集客、大学のPRなど、多岐にわたるビジネス課題を「マンガの力」で解決しています。
+                            イベント集客用の漫画LP、大学PR漫画、企業の採用漫画、YouTube広告向けAI漫画動画など、法人案件も多数手がけています。
                         </p>
-                        <ul className="space-y-6">
-                            <li className="flex items-start gap-4">
-                                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 shrink-0" />
-                                <div>
-                                    <span className="text-foreground font-bold block mb-1">某大規模イベントの漫画LP制作</span>
-                                    <span className="text-sm text-slate-400 leading-relaxed block">集客用のランディングページ（LP）を漫画化し、親しみやすさとコンバージョン率を向上。</span>
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-4">
-                                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 shrink-0" />
-                                <div>
-                                    <span className="text-foreground font-bold block mb-1">某大学のPR漫画制作</span>
-                                    <span className="text-sm text-slate-400 leading-relaxed block">オープンキャンパスの案内等に活用し、学生からの興味関心を強力に惹きつけます。</span>
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-4">
-                                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 shrink-0" />
-                                <div>
-                                    <span className="text-foreground font-bold block mb-1">企業の採用漫画制作</span>
-                                    <span className="text-sm text-slate-400 leading-relaxed block">企業の魅力やリアルな働き方を分かりやすく伝え、ミスマッチ防止と応募増に貢献。</span>
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-4">
-                                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 shrink-0" />
-                                <div>
-                                    <span className="text-foreground font-bold block mb-1">AI漫画の動画制作</span>
-                                    <span className="text-sm text-slate-400 leading-relaxed block">YouTube広告用などに、マンガ素材を活用したインパクトのある動画コンテンツを制作。</span>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
                     </Reveal>
 
