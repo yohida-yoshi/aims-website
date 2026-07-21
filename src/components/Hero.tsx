@@ -34,49 +34,57 @@ export default function Hero() {
                     alt=""
                     className="kenburns w-full h-full object-cover object-center"
                 />
-                {/* 白系オーバーレイ：中央は薄く、上下は少し締める */}
-                <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/40 to-white/65" />
+                {/* オーバーレイ：控えめにしてイラストを活かす。中央テキスト裏だけ白を強める */}
+                <div className="absolute inset-0 bg-gradient-to-b from-white/35 via-white/15 to-white/60" />
+                <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 60% 45% at 50% 55%, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.35) 55%, rgba(255,255,255,0) 100%)' }} />
+            </div>
+
+            {/* 巨大アウトラインの英字名（背景と本文の中間レイヤー） */}
+            <div aria-hidden="true" className="hero-fade absolute inset-0 z-[5] flex items-center justify-center pointer-events-none select-none" style={{ animationDelay: '0.05s' }}>
+                <span
+                    className="font-black leading-none tracking-tight whitespace-nowrap"
+                    style={{
+                        fontSize: 'clamp(4.5rem, 13vw, 13rem)',
+                        color: 'transparent',
+                        WebkitTextStroke: '2px rgba(2,132,199,0.28)',
+                        transform: 'translateY(-38%)',
+                    }}
+                >
+                    YOSHIHORI
+                </span>
             </div>
 
             {/* コンテンツ：中央配置 */}
-            <div className="relative z-10 container mx-auto px-4 md:px-6 flex flex-col items-center text-center gap-6">
+            <div className="relative z-10 container mx-auto px-4 md:px-6 flex flex-col items-center text-center gap-5">
 
                 {/* バッジ */}
-                <div className="hero-fade inline-flex items-center rounded-full border border-primary-600/40 bg-white/80 backdrop-blur-sm px-4 py-1.5 text-sm font-semibold text-primary-700" style={{ animationDelay: '0.1s' }}>
+                <div className="hero-fade inline-flex items-center rounded-full border border-primary-600/40 bg-white/80 backdrop-blur-sm px-4 py-1.5 text-sm font-semibold text-primary-700" style={{ animationDelay: '0.15s' }}>
                     <span className="flex h-2 w-2 rounded-full bg-primary-600 mr-2 animate-pulse" />
                     AI × Entertainment Creator
                 </div>
 
-                {/* アバター */}
-                <div className="hero-fade relative" style={{ animationDelay: '0.25s' }}>
-                    <div className="absolute inset-0 rounded-full bg-primary-300/40 blur-3xl scale-125" />
-                    <div className="relative w-44 h-44 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-white shadow-2xl" style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.8))'}}>
-                        <img
-                            src="/avatar.png"
-                            alt="ヨシホリ"
-                            className="w-full h-full object-cover"
-                        />
+                {/* 名前・肩書き */}
+                <div className="hero-fade" style={{ animationDelay: '0.35s', filter: 'drop-shadow(0 0 12px rgba(255,255,255,1)) drop-shadow(0 0 24px rgba(255,255,255,0.8))' }}>
+                    <h1 className="text-7xl md:text-9xl font-black tracking-tight text-slate-800 mb-4">
+                        ヨシホリ
+                    </h1>
+                    <div className="flex items-center justify-center gap-3">
+                        <span className="h-px w-8 md:w-12 bg-sky-600/70" />
+                        <p className="text-xl md:text-3xl font-bold text-sky-600 tracking-[0.15em]">
+                            AIエンタメクリエイター
+                        </p>
+                        <span className="h-px w-8 md:w-12 bg-sky-600/70" />
                     </div>
                 </div>
 
-                {/* 名前・肩書き */}
-                <div className="hero-fade" style={{ animationDelay: '0.45s', filter: 'drop-shadow(0 0 12px rgba(255,255,255,1)) drop-shadow(0 0 24px rgba(255,255,255,0.8))' }}>
-                    <h1 className="text-6xl md:text-8xl font-black tracking-tight text-slate-700 mb-2">
-                        ヨシホリ
-                    </h1>
-                    <p className="text-2xl md:text-3xl font-bold text-sky-600 tracking-wide">
-                        AIエンタメクリエイター
-                    </p>
-                </div>
-
                 {/* キャッチコピー */}
-                <p className="hero-fade text-base md:text-xl text-slate-600 max-w-lg leading-relaxed font-medium" style={{ animationDelay: '0.65s', filter: 'drop-shadow(0 0 8px rgba(255,255,255,1)) drop-shadow(0 0 16px rgba(255,255,255,0.9))' }}>
+                <p className="hero-fade text-base md:text-xl text-slate-600 max-w-lg leading-relaxed font-medium mt-2" style={{ animationDelay: '0.6s', filter: 'drop-shadow(0 0 8px rgba(255,255,255,1)) drop-shadow(0 0 16px rgba(255,255,255,0.9))' }}>
                     AI漫画から始まり、アニメ・映画・CM・MVへ。<br />
                     チームを率いて、新しいエンタメの形をつくるディレクター。
                 </p>
 
                 {/* ボタン */}
-                <div className="hero-fade flex flex-col sm:flex-row gap-4 mt-2" style={{ animationDelay: '0.85s' }}>
+                <div className="hero-fade flex flex-col sm:flex-row gap-4 mt-4" style={{ animationDelay: '0.85s' }}>
                     <a
                         href="#works"
                         className="inline-flex items-center justify-center rounded-full bg-primary-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary-500/30 transition-all hover:bg-primary-500 hover:scale-105 active:scale-95"
