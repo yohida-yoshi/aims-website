@@ -1,17 +1,18 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
 const visionItems = [
     {
-        image: "/vision/mv.png",
-        video: "/works/mv-pico-ring.mp4",
+        video: "/works/short-drama-sample.mp4",
         title: "MV（ミュージックビデオ）",
         description: "アーティストの世界観を、AIが生み出す唯一無二のビジュアルで表現。音楽とアニメーションが融合した新しいMVの形を追求します。",
         status: "準備中",
         statusColor: "bg-sky-400/90 text-sky-950",
     },
     {
-        image: "/vision/cm.png",
         video: "/works/cm-sample-fictional-product.mp4",
         title: "CM・プロモーション映像",
         description: "企業や商品のPRをAIアニメーション×漫画表現で。従来の映像制作より圧倒的に速く、印象に残るビジュアルを提供します。",
@@ -20,8 +21,7 @@ const visionItems = [
         note: "※架空の商品です",
     },
     {
-        image: "/vision/movie.png",
-        video: "/works/short-drama-sample.mp4",
+        video: "/works/mv-pico-ring.mp4",
         title: "短編ショートドラマ",
         description: "AIを武器に、低コストでクオリティの高い映像作品を。独自のストーリーを世界に向けて発信していきます。",
         status: "準備中",
@@ -29,7 +29,22 @@ const visionItems = [
     },
 ];
 
+type VisionItem = (typeof visionItems)[number];
+
 export default function Vision() {
+    const [selectedVideo, setSelectedVideo] = useState<VisionItem | null>(null);
+
+    useEffect(() => {
+        if (!selectedVideo) return;
+
+        const closeOnEscape = (event: KeyboardEvent) => {
+            if (event.key === "Escape") setSelectedVideo(null);
+        };
+
+        document.addEventListener("keydown", closeOnEscape);
+        return () => document.removeEventListener("keydown", closeOnEscape);
+    }, [selectedVideo]);
+
     return (
         <section id="vision" className="relative overflow-hidden py-28 md:py-36 bg-slate-950">
             <span aria-hidden="true" className="watermark">VISION</span>
@@ -45,17 +60,21 @@ export default function Vision() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                     {visionItems.map((item, index) => (
-                        <Reveal key={index} delay={index * 100}>
-                            <div className="group relative aspect-video rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-primary-500/20 transition-all duration-500 hover:-translate-y-2">
+                        <Reveal key={item.title} delay={index * 100}>
+                            <button
+                                type="button"
+                                onClick={() => setSelectedVideo(item)}
+                                className="group relative block w-full aspect-video rounded-2xl overflow-hidden text-left shadow-lg hover:shadow-2xl hover:shadow-primary-500/20 transition-all duration-500 hover:-translate-y-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-slate-950"
+                            >
                                 <video
                                     src={item.video}
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                                    controls
+                                    muted
                                     playsInline
                                     preload="metadata"
                                 />
-                                <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none" />
-                                <div className="absolute inset-x-0 bottom-0 p-4 md:p-5 pointer-events-none">
+                                <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+                                <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
                                     <span className={`inline-block text-[10px] md:text-xs font-bold px-2.5 py-0.5 rounded-full mb-2 ${item.statusColor}`}>
                                         {item.status}
                                     </span>
@@ -71,7 +90,7 @@ export default function Vision() {
                                         </p>
                                     )}
                                 </div>
-                            </div>
+                            </button>
                         </Reveal>
                     ))}
                 </div>
@@ -91,6 +110,40 @@ export default function Vision() {
                     </div>
                 </Reveal>
             </div>
+
+            {selectedVideo && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4 py-6 backdrop-blur-sm"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label={selectedVideo.title}
+                    onClick={() => setSelectedVideo(null)}
+                >
+                    <div className="relative w-full max-w-5xl" onClick={(event) => event.stopPropagation()}>
+                        <button
+                            type="button"
+                            onClick={() => setSelectedVideo(null)}
+                            className="absolute -top-12 right-0 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
+                        >
+                            閉じる
+                        </button>
+                        <div className="overflow-hidden rounded-2xl bg-black shadow-2xl">
+                            <video
+                                key={selectedVideo.video}
+                                src={selectedVideo.video}
+                                className="w-full aspect-video bg-black object-contain"
+                                controls
+                                autoPlay
+                                playsInline
+                            />
+                        </div>
+                        <div className="mt-4 text-white">
+                            <h3 className="text-lg font-bold">{selectedVideo.title}</h3>
+                            {selectedVideo.note && <p className="mt-1 text-sm text-white/75">{selectedVideo.note}</p>}
+                        </div>
+                    </div>
+                </div>
+            )}
         </section>
     );
 }
