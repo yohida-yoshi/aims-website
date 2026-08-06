@@ -100,9 +100,7 @@ export default function Works() {
                         {bookWorks.map((book, i) => (
                             <Reveal key={book.id} delay={i * 80}>
                                 <div className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-700 bg-white aspect-[2/3] hover:-translate-y-1">
-                                    <div className="absolute inset-0 bg-slate-100 dark:bg-slate-800 flex items-center justify-center p-2">
-                                        <span className="text-xs text-slate-400 text-center">画像を入れてください</span>
-                                    </div>
+                                    <div className="absolute inset-0 bg-slate-100 dark:bg-slate-800" />
                                     <img
                                         src={book.image}
                                         alt={book.title}
@@ -188,6 +186,34 @@ export default function Works() {
                             </p>
                         </div>
                     </a>
+                    </Reveal>
+                    <Reveal delay={150}>
+                    <div className="group block rounded-2xl bg-slate-900 shadow-sm border border-slate-800 hover:border-primary-500/50 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 overflow-hidden">
+                        <div className="w-full aspect-video relative overflow-hidden bg-black">
+                            <video
+                                src="/works/cm-sample-fictional-product.mp4"
+                                className="w-full h-full object-cover"
+                                controls
+                                playsInline
+                                preload="metadata"
+                            />
+                        </div>
+
+                        <div className="p-5 md:p-6">
+                            <div className="flex flex-wrap items-center gap-2 mb-3">
+                                <h4 className="text-lg md:text-xl font-bold text-foreground">CM作品例</h4>
+                                <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
+                                    CM
+                                </span>
+                            </div>
+                            <p className="text-sm md:text-base text-slate-400 leading-relaxed mb-3">
+                                AI動画制作による商品CMのサンプルです。
+                            </p>
+                            <p className="text-xs text-slate-400 bg-slate-900 px-3 py-1.5 rounded-full inline-block border border-slate-800">
+                                ※架空の商品です
+                            </p>
+                        </div>
+                    </div>
                     </Reveal>
                     </div>
                 </div>
