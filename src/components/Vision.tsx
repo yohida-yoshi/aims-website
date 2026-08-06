@@ -11,6 +11,7 @@ const visionItems = [
     },
     {
         image: "/vision/movie.png",
+        video: "/works/short-drama-sample.mp4",
         title: "映画・短編フィルム",
         description: "AIを武器に、低コストでクオリティの高い映像作品を。独自のストーリーを世界に向けて発信していきます。",
         status: "準備中",
@@ -26,6 +27,7 @@ const visionItems = [
     },
     {
         image: "/vision/mv.png",
+        video: "/works/mv-pico-ring.mp4",
         title: "MV（ミュージックビデオ）",
         description: "アーティストの世界観を、AIが生み出す唯一無二のビジュアルで表現。音楽とアニメーションが融合した新しいMVの形を追求します。",
         status: "準備中",
@@ -49,8 +51,8 @@ export default function Vision() {
 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                     {visionItems.map((item, index) => (
-                        <Reveal key={index} delay={index * 100}>
-                            <div className="group relative aspect-[9/16] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-primary-500/20 transition-all duration-500 hover:-translate-y-2">
+                        <Reveal key={index} delay={index * 100} className={item.video ? "col-span-2 lg:col-span-2" : ""}>
+                            <div className={`group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-primary-500/20 transition-all duration-500 hover:-translate-y-2 ${item.video ? "aspect-video" : "aspect-[9/16]"}`}>
                                 {/* ポスター画像 */}
                                 {item.video ? (
                                     <video
