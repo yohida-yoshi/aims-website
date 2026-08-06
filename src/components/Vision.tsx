@@ -18,6 +18,7 @@ const visionItems = [
     },
     {
         image: "/vision/cm.png",
+        video: "/works/cm-sample-fictional-product.mp4",
         title: "CM・プロモーション映像",
         description: "企業や商品のPRをAIアニメーション×漫画表現で。従来の映像制作より圧倒的に速く、印象に残るビジュアルを提供します。",
         status: "準備中",
@@ -51,11 +52,21 @@ export default function Vision() {
                         <Reveal key={index} delay={index * 100}>
                             <div className="group relative aspect-[9/16] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-primary-500/20 transition-all duration-500 hover:-translate-y-2">
                                 {/* ポスター画像 */}
-                                <img
-                                    src={item.image}
-                                    alt={item.title}
-                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                                />
+                                {item.video ? (
+                                    <video
+                                        src={item.video}
+                                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                                        controls
+                                        playsInline
+                                        preload="metadata"
+                                    />
+                                ) : (
+                                    <img
+                                        src={item.image}
+                                        alt={item.title}
+                                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                                    />
+                                )}
                                 {/* 下部グラデーション */}
                                 <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
                                 {/* テキスト */}
@@ -69,6 +80,11 @@ export default function Vision() {
                                     <p className="text-[11px] md:text-xs text-white/80 leading-relaxed line-clamp-3 md:line-clamp-none">
                                         {item.description}
                                     </p>
+                                    {item.video && (
+                                        <p className="mt-2 text-[10px] md:text-xs text-white/80">
+                                            ※架空の商品です
+                                        </p>
+                                    )}
                                 </div>
                             </div>
                         </Reveal>
