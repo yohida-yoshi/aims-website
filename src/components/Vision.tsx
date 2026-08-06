@@ -49,7 +49,6 @@ export default function Vision() {
                             <div className="group relative aspect-video rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-primary-500/20 transition-all duration-500 hover:-translate-y-2">
                                 <video
                                     src={item.video}
-                                    poster={item.image}
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                                     controls
                                     playsInline
