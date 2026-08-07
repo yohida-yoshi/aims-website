@@ -1,18 +1,19 @@
 import FilmStrip from "./FilmStrip";
 
+// FilmStripは装飾用の小さな帯なので、本体画像ではなく軽量サムネ(thumbs/)を使う
 const heroStrip = [
-    "/vision/anime.png", "/works/book1.png", "/works/title2.png", "/vision/movie.png",
-    "/works/book3.png", "/works/title6.png", "/vision/cm.png", "/works/book5.png",
-    "/vision/mv.png", "/works/title9.png",
+    "/works/thumbs/anime.webp", "/works/thumbs/book1.webp", "/works/thumbs/title2.webp", "/works/thumbs/movie.webp",
+    "/works/thumbs/book3.webp", "/works/thumbs/title6.webp", "/works/thumbs/cm.webp", "/works/thumbs/book5.webp",
+    "/works/thumbs/mv.webp", "/works/thumbs/title9.webp",
 ];
 const heroStripB = [
-    "/works/title1.png", "/works/book2.png", "/works/title3.png", "/vision/mv.png",
-    "/works/title5.png", "/works/book4.png", "/works/title7.png", "/vision/anime.png",
-    "/works/title10.png", "/works/book6.png",
+    "/works/thumbs/title1.webp", "/works/thumbs/book2.webp", "/works/thumbs/title3.webp", "/works/thumbs/mv.webp",
+    "/works/thumbs/title5.webp", "/works/thumbs/book4.webp", "/works/thumbs/title7.webp", "/works/thumbs/anime.webp",
+    "/works/thumbs/title10.webp", "/works/thumbs/book6.webp",
 ];
 const heroStripC = [
-    "/vision/movie.png", "/works/title4.png", "/works/book3.png", "/works/title8.png",
-    "/vision/cm.png", "/works/book1.png", "/works/title6.png", "/works/book5.png",
+    "/works/thumbs/movie.webp", "/works/thumbs/title4.webp", "/works/thumbs/book3.webp", "/works/thumbs/title8.webp",
+    "/works/thumbs/cm.webp", "/works/thumbs/book1.webp", "/works/thumbs/title6.webp", "/works/thumbs/book5.webp",
 ];
 
 export default function Hero() {

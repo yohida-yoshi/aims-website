@@ -40,7 +40,13 @@ export default function FilmStrip({ images, speed = 0.15, className = "" }: Film
                 {frames.map((src, i) => (
                     <div key={i} className="film-frame shrink-0">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={src} alt="" className="h-40 md:h-44 w-28 md:w-32 object-cover rounded-[2px]" />
+                        <img
+                            src={src}
+                            alt=""
+                            loading="lazy"
+                            decoding="async"
+                            className="h-40 md:h-44 w-28 md:w-32 object-cover rounded-[2px]"
+                        />
                     </div>
                 ))}
             </div>

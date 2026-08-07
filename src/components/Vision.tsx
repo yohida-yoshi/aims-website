@@ -1,30 +1,31 @@
+import Image from "next/image";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
 const visionItems = [
     {
-        image: "/vision/anime.png",
+        image: "/vision/anime.webp",
         title: "アニメーション",
         description: "AI技術を活用したアニメーション制作へ。漫画で培ったキャラクター表現・演出力を動く映像へと昇華させます。",
         status: "進行中",
         statusColor: "bg-green-400/90 text-green-950",
     },
     {
-        image: "/vision/movie.png",
+        image: "/vision/movie.webp",
         title: "映画・短編フィルム",
         description: "AIを武器に、低コストでクオリティの高い映像作品を。独自のストーリーを世界に向けて発信していきます。",
         status: "準備中",
         statusColor: "bg-sky-400/90 text-sky-950",
     },
     {
-        image: "/vision/cm.png",
+        image: "/vision/cm.webp",
         title: "CM・プロモーション映像",
         description: "企業や商品のPRをAIアニメーション×漫画表現で。従来の映像制作より圧倒的に速く、印象に残るビジュアルを提供します。",
         status: "準備中",
         statusColor: "bg-sky-400/90 text-sky-950",
     },
     {
-        image: "/vision/mv.png",
+        image: "/vision/mv.webp",
         title: "MV（ミュージックビデオ）",
         description: "アーティストの世界観を、AIが生み出す唯一無二のビジュアルで表現。音楽とアニメーションが融合した新しいMVの形を追求します。",
         status: "準備中",
@@ -51,10 +52,13 @@ export default function Vision() {
                         <Reveal key={index} delay={index * 100}>
                             <div className="group relative aspect-[9/16] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-primary-500/20 transition-all duration-500 hover:-translate-y-2">
                                 {/* ポスター画像 */}
-                                <img
+                                <Image
                                     src={item.image}
                                     alt={item.title}
-                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                                    fill
+                                    sizes="(min-width: 1024px) 22vw, 45vw"
+                                    loading="lazy"
+                                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                                 />
                                 {/* 下部グラデーション */}
                                 <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
